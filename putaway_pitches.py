@@ -9,8 +9,11 @@ import pandas as pd
 START_DATE = "2026-03-01"
 END_DATE = "2026-08-07"
 
+# Statcast pitch type
 PITCH_TYPE = "FF"
 
+# Qualification requirement:
+# 1.0 two-strike pitch of this type per team game
 PITCHES_PER_TEAM_GAME = 1.0
 
 
@@ -94,14 +97,22 @@ print(
 
 
 # ==========================================
-# IDENTIFY PITCHING TEAM
+# IDENTIFY PITCHER'S TEAM
 # ==========================================
+
+# Top of inning:
+#   Away team is batting
+#   Home team is pitching
+#
+# Bottom of inning:
+#   Home team is batting
+#   Away team is pitching
 
 two_strike["pitching_team"] = two_strike.apply(
     lambda row:
-        row["away_team"]
+        row["home_team"]
         if row["inning_topbot"] == "Top"
-        else row["home_team"],
+        else row["away_team"],
     axis=1
 )
 
@@ -159,6 +170,16 @@ leaderboard["minimum_two_strike_pitches"] = (
 
 
 # ==========================================
+# QUALIFY
+# ==========================================
+
+leaderboard = leaderboard[
+    leaderboard["two_strike_pitches"]
+    >= leaderboard["minimum_two_strike_pitches"]
+].copy()
+
+
+# ==========================================
 # PUTAWAY RATE
 # ==========================================
 
@@ -169,24 +190,28 @@ leaderboard["putaway_rate"] = (
 
 
 # ==========================================
-# DIAGNOSTIC OUTPUT
+# SORT
+# ==========================================
+
+leaderboard = leaderboard.sort_values(
+    "putaway_rate",
+    ascending=False
+)
+
+
+# ==========================================
+# DISPLAY
 # ==========================================
 
 print()
-print("=" * 110)
-print("TOP PITCHERS BEFORE QUALIFICATION")
-print("=" * 110)
-
-diagnostic = leaderboard.sort_values(
-    "two_strike_pitches",
-    ascending=False
-).head(25)
+print("=" * 100)
+print("FOUR-SEAM FASTBALL PUTAWAY RATE")
+print("=" * 100)
 
 print(
-    diagnostic[
+    leaderboard[
         [
             "player_name",
-            "teams",
             "two_strike_pitches",
             "strikeouts",
             "putaway_rate",
