@@ -44,25 +44,62 @@ print(f"Regular-season pitches: {len(data):,}")
 
 
 # ==========================================
-# FOUR-SEAM FASTBALLS
+# COUNT TEAM GAMES
+# ==========================================
+
+# Create a list of every team/game combination.
+home_games = data[
+    ["game_pk", "home_team"]
+].rename(
+    columns={"home_team": "team"}
+)
+
+away_games = data[
+    ["game_pk", "away_team"]
+].rename(
+    columns={"away_team": "team"}
+)
+
+team_games = pd.concat(
+    [home_games, away_games]
+).drop_duplicates()
+
+team_game_counts = (
+    team_games
+    .groupby("team")["game_pk"]
+    .nunique()
+    .to_dict()
+)
+
+print()
+print("Team games:")
+print(team_game_counts)
+
+
+# ==========================================
+# PITCH TYPE
 # ==========================================
 
 pitch_data = data[
     data["pitch_type"] == PITCH_TYPE
 ].copy()
 
+print()
 print(f"Four-seam fastballs: {len(pitch_data):,}")
 
 
 # ==========================================
-# TWO-STRIKE FOUR-SEAM FASTBALLS
+# TWO-STRIKE PITCHES
 # ==========================================
 
 two_strike = pitch_data[
     pitch_data["strikes"] == 2
 ].copy()
 
-print(f"Two-strike four-seam fastballs: {len(two_strike):,}")
+print(
+    f"Two-strike four-seam fastballs: "
+    f"{len(two_strike):,}"
+)
 
 
 # ==========================================
@@ -79,24 +116,7 @@ two_strike["pitching_team"] = two_strike.apply(
 
 
 # ==========================================
-# COUNT TEAM GAMES
-# ==========================================
-
-# Get every unique regular-season game for each team.
-team_game_counts = {}
-
-for team in data["home_team"].dropna().unique():
-
-    games = data[
-        (data["home_team"] == team) |
-        (data["away_team"] == team)
-    ]["game_pk"].nunique()
-
-    team_game_counts[team] = games
-
-
-# ==========================================
-# BUILD PITCHER DATA
+# BUILD PITCHER LEADERBOARD
 # ==========================================
 
 leaderboard = (
@@ -148,7 +168,7 @@ leaderboard["minimum_two_strike_pitches"] = (
 
 
 # ==========================================
-# APPLY QUALIFICATION
+# QUALIFY
 # ==========================================
 
 leaderboard = leaderboard[
