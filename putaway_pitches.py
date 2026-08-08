@@ -26,12 +26,23 @@ print(f"Total pitches downloaded: {len(data):,}")
 
 
 # ==========================================
-# SHOW AVAILABLE PITCH TYPES
+# REGULAR SEASON ONLY
+# ==========================================
+
+data = data[
+    data["game_type"] == "R"
+].copy()
+
+print(f"Regular-season pitches: {len(data):,}")
+
+
+# ==========================================
+# AVAILABLE PITCH TYPES
 # ==========================================
 
 print()
 print("=" * 70)
-print("AVAILABLE PITCH TYPES")
+print("REGULAR SEASON PITCH TYPES")
 print("=" * 70)
 
 pitch_types = (
@@ -46,7 +57,7 @@ print(pitch_types.to_string(index=False))
 
 
 # ==========================================
-# SHOW PITCH TYPE NAMES
+# PITCH TYPES FOUND
 # ==========================================
 
 print()
