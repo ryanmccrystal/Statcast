@@ -1,5 +1,7 @@
 from pybaseball import statcast
 import pandas as pd
+import json
+from datetime import datetime, timezone
 
 
 # ==========================================
@@ -15,6 +17,8 @@ PITCH_TYPE = "FF"
 # Qualification requirement:
 # 1.0 two-strike pitch of this type per team game
 PITCHES_PER_TEAM_GAME = 1.0
+
+OUTPUT_FILE = "putaway_pitches.json"
 
 
 # ==========================================
@@ -72,7 +76,7 @@ team_game_counts = (
 
 
 # ==========================================
-# PITCH TYPE
+# FOUR-SEAM FASTBALLS
 # ==========================================
 
 pitch_data = data[
@@ -83,7 +87,7 @@ print(f"Four-seam fastballs: {len(pitch_data):,}")
 
 
 # ==========================================
-# TWO-STRIKE PITCHES
+# TWO-STRIKE FOUR-SEAM FASTBALLS
 # ==========================================
 
 two_strike = pitch_data[
@@ -99,14 +103,6 @@ print(
 # ==========================================
 # IDENTIFY PITCHER'S TEAM
 # ==========================================
-
-# Top of inning:
-#   Away team is batting
-#   Home team is pitching
-#
-# Bottom of inning:
-#   Home team is batting
-#   Away team is pitching
 
 two_strike["pitching_team"] = two_strike.apply(
     lambda row:
@@ -170,7 +166,7 @@ leaderboard["minimum_two_strike_pitches"] = (
 
 
 # ==========================================
-# QUALIFY
+# QUALIFY PITCHERS
 # ==========================================
 
 leaderboard = leaderboard[
@@ -180,7 +176,7 @@ leaderboard = leaderboard[
 
 
 # ==========================================
-# PUTAWAY RATE
+# CALCULATE PUTAWAY RATE
 # ==========================================
 
 leaderboard["putaway_rate"] = (
@@ -200,29 +196,80 @@ leaderboard = leaderboard.sort_values(
 
 
 # ==========================================
-# DISPLAY
+# CREATE JSON DATA
 # ==========================================
 
-print()
-print("=" * 100)
-print("FOUR-SEAM FASTBALL PUTAWAY RATE")
-print("=" * 100)
+players = []
 
-print(
-    leaderboard[
-        [
-            "player_name",
-            "two_strike_pitches",
-            "strikeouts",
-            "putaway_rate",
-            "team_games",
-            "minimum_two_strike_pitches"
-        ]
-    ].to_string(
-        index=False,
-        formatters={
-            "putaway_rate": lambda x: f"{x:.1%}",
-            "minimum_two_strike_pitches": lambda x: f"{x:.0f}"
+for _, row in leaderboard.iterrows():
+
+    players.append({
+        "player_id": int(row["pitcher"]),
+        "player_name": row["player_name"],
+        "teams": row["teams"],
+        "team_games": int(row["team_games"]),
+        "two_strike_pitches": int(row["two_strike_pitches"]),
+        "strikeouts": int(row["strikeouts"]),
+        "putaway_rate": round(
+            float(row["putaway_rate"]),
+            4
+        )
+    })
+
+
+# ==========================================
+# FINAL JSON
+# ==========================================
+
+output = {
+    "last_updated": datetime.now(
+        timezone.utc
+    ).strftime("%Y-%m-%dT%H:%M:%SZ"),
+
+    "season": 2026,
+
+    "season_type": "regular",
+
+    "qualification": {
+        "minimum_two_strike_pitches_per_team_game":
+            PITCHES_PER_TEAM_GAME
+    },
+
+    "pitch_types": {
+
+        "four_seam": {
+
+            "name": "Four-Seam Fastball",
+
+            "statcast_code": "FF",
+
+            "players": players
         }
+    }
+}
+
+
+# ==========================================
+# WRITE JSON
+# ==========================================
+
+with open(
+    OUTPUT_FILE,
+    "w",
+    encoding="utf-8"
+) as f:
+
+    json.dump(
+        output,
+        f,
+        indent=2,
+        ensure_ascii=False
     )
-)
+
+
+print()
+print("=" * 70)
+print("JSON CREATED")
+print("=" * 70)
+print(f"File: {OUTPUT_FILE}")
+print(f"Qualified pitchers: {len(players)}")
