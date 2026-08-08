@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Putaway Pitches</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: white;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin: 8px 0 25px 0;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .updated {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+        }
+
+        th {
+            text-align: left;
+            border-bottom: 2px solid black;
+            padding: 8px 6px;
+        }
+
+        td {
+            padding: 7px 6px;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        th.rate,
+        td.rate {
+            text-align: right;
+        }
+
+        th.number,
+        td.number {
+            text-align: right;
+        }
+
+        .error {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>PUTAWAY PITCHES</h1>
+
+    <h2>Four-Seam Fastball</h2>
+
+    <div class="updated" id="updated"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th class="rate">Putaway Rate</th>
+                <th class="number">2-Str FF</th>
+                <th class="number">K</th>
+            </tr>
+        </thead>
+
+        <tbody id="leaderboard">
+        </tbody>
+    </table>
+
+    <div class="error" id="error"></div>
+
+</div>
+
+
+<script>
+
+async function loadLeaderboard() {
+
+    try {
+
+        const response = await fetch("putaway_pitches.json");
+
+        if (!response.ok) {
+            throw new Error("Could not load leaderboard data.");
+        }
+
+        const data = await response.json();
+
+        const fourSeam = data.pitch_types.four_seam;
+
+        const players = fourSeam.players;
+
+        const table = document.getElementById("leaderboard");
+
+        table.innerHTML = "";
+
+        players.forEach((player) => {
+
+            const row = document.createElement("tr");
+
+            const playerCell = document.createElement("td");
+
+            const rateCell = document.createElement("td");
+
+            const pitchesCell = document.createElement("td");
+
+            const strikeoutsCell = document.createElement("td");
+
+
+            playerCell.textContent =
+                player.player_name.split(", ").reverse().join(", ")
+                + ", "
+                + player.teams.join("/");
+
+
+            rateCell.textContent =
+                (player.putaway_rate * 100).toFixed(1) + "%";
+
+
+            pitchesCell.textContent =
+                player.two_strike_pitches;
+
+
+            strikeoutsCell.textContent =
+                player.strikeouts;
+
+
+            rateCell.className = "rate";
+
+            pitchesCell.className = "number";
+
+            strikeoutsCell.className = "number";
+
+
+            row.appendChild(playerCell);
+
+            row.appendChild(rateCell);
+
+            row.appendChild(pitchesCell);
+
+            row.appendChild(strikeoutsCell);
+
+
+            table.appendChild(row);
+
+        });
+
+
+        const updated =
+            new Date(data.last_updated);
+
+        document.getElementById("updated").textContent =
+            "Updated " +
+            updated.toLocaleString(
+                "en-US",
+                {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit"
+                }
+            );
+
+
+    } catch (error) {
+
+        document.getElementById("error").textContent =
+            "Unable to load leaderboard data.";
+
+        console.error(error);
+    }
+}
+
+
+loadLeaderboard();
+
+</script>
+
+</body>
+</html>
