@@ -9,11 +9,8 @@ import pandas as pd
 START_DATE = "2026-03-01"
 END_DATE = "2026-08-07"
 
-# Statcast pitch type
 PITCH_TYPE = "FF"
 
-# Qualification requirement:
-# 1.0 two-strike pitch of this type per team game
 PITCHES_PER_TEAM_GAME = 1.0
 
 
@@ -47,7 +44,6 @@ print(f"Regular-season pitches: {len(data):,}")
 # COUNT TEAM GAMES
 # ==========================================
 
-# Create a list of every team/game combination.
 home_games = data[
     ["game_pk", "home_team"]
 ].rename(
@@ -71,10 +67,6 @@ team_game_counts = (
     .to_dict()
 )
 
-print()
-print("Team games:")
-print(team_game_counts)
-
 
 # ==========================================
 # PITCH TYPE
@@ -84,7 +76,6 @@ pitch_data = data[
     data["pitch_type"] == PITCH_TYPE
 ].copy()
 
-print()
 print(f"Four-seam fastballs: {len(pitch_data):,}")
 
 
@@ -103,7 +94,7 @@ print(
 
 
 # ==========================================
-# IDENTIFY PITCHER'S TEAM
+# IDENTIFY PITCHING TEAM
 # ==========================================
 
 two_strike["pitching_team"] = two_strike.apply(
@@ -168,16 +159,6 @@ leaderboard["minimum_two_strike_pitches"] = (
 
 
 # ==========================================
-# QUALIFY
-# ==========================================
-
-leaderboard = leaderboard[
-    leaderboard["two_strike_pitches"]
-    >= leaderboard["minimum_two_strike_pitches"]
-].copy()
-
-
-# ==========================================
 # PUTAWAY RATE
 # ==========================================
 
@@ -188,28 +169,24 @@ leaderboard["putaway_rate"] = (
 
 
 # ==========================================
-# SORT
-# ==========================================
-
-leaderboard = leaderboard.sort_values(
-    "putaway_rate",
-    ascending=False
-)
-
-
-# ==========================================
-# DISPLAY
+# DIAGNOSTIC OUTPUT
 # ==========================================
 
 print()
-print("=" * 100)
-print("FOUR-SEAM FASTBALL PUTAWAY RATE")
-print("=" * 100)
+print("=" * 110)
+print("TOP PITCHERS BEFORE QUALIFICATION")
+print("=" * 110)
+
+diagnostic = leaderboard.sort_values(
+    "two_strike_pitches",
+    ascending=False
+).head(25)
 
 print(
-    leaderboard[
+    diagnostic[
         [
             "player_name",
+            "teams",
             "two_strike_pitches",
             "strikeouts",
             "putaway_rate",
