@@ -12,8 +12,9 @@ END_DATE = "2026-08-07"
 # Statcast pitch type
 PITCH_TYPE = "FF"
 
-# Temporary minimum for testing
-MIN_TWO_STRIKE_PITCHES = 100
+# Qualification requirement:
+# 1.0 two-strike pitch of this type per team game
+PITCHES_PER_TEAM_GAME = 1.0
 
 
 # ==========================================
@@ -46,38 +47,74 @@ print(f"Regular-season pitches: {len(data):,}")
 # FOUR-SEAM FASTBALLS
 # ==========================================
 
-four_seam = data[
+pitch_data = data[
     data["pitch_type"] == PITCH_TYPE
 ].copy()
 
-print(f"Four-seam fastballs: {len(four_seam):,}")
+print(f"Four-seam fastballs: {len(pitch_data):,}")
 
 
 # ==========================================
 # TWO-STRIKE FOUR-SEAM FASTBALLS
 # ==========================================
 
-two_strike_ff = four_seam[
-    four_seam["strikes"] == 2
+two_strike = pitch_data[
+    pitch_data["strikes"] == 2
 ].copy()
 
-print(f"Two-strike four-seam fastballs: {len(two_strike_ff):,}")
+print(f"Two-strike four-seam fastballs: {len(two_strike):,}")
 
 
 # ==========================================
-# BUILD LEADERBOARD
+# IDENTIFY PITCHER'S TEAM
+# ==========================================
+
+two_strike["pitching_team"] = two_strike.apply(
+    lambda row:
+        row["away_team"]
+        if row["inning_topbot"] == "Top"
+        else row["home_team"],
+    axis=1
+)
+
+
+# ==========================================
+# COUNT TEAM GAMES
+# ==========================================
+
+# Get every unique regular-season game for each team.
+team_game_counts = {}
+
+for team in data["home_team"].dropna().unique():
+
+    games = data[
+        (data["home_team"] == team) |
+        (data["away_team"] == team)
+    ]["game_pk"].nunique()
+
+    team_game_counts[team] = games
+
+
+# ==========================================
+# BUILD PITCHER DATA
 # ==========================================
 
 leaderboard = (
-    two_strike_ff
+    two_strike
     .groupby(["pitcher", "player_name"])
     .agg(
         two_strike_pitches=("pitch_type", "size"),
+
         strikeouts=(
             "events",
             lambda x: x.isin(
                 ["strikeout", "strikeout_double_play"]
             ).sum()
+        ),
+
+        teams=(
+            "pitching_team",
+            lambda x: sorted(x.dropna().unique())
         )
     )
     .reset_index()
@@ -85,22 +122,49 @@ leaderboard = (
 
 
 # ==========================================
-# CALCULATE PUTAWAY RATE
+# CALCULATE TEAM GAMES
+# ==========================================
+
+def calculate_team_games(teams):
+    return sum(
+        team_game_counts.get(team, 0)
+        for team in teams
+    )
+
+
+leaderboard["team_games"] = leaderboard["teams"].apply(
+    calculate_team_games
+)
+
+
+# ==========================================
+# QUALIFICATION THRESHOLD
+# ==========================================
+
+leaderboard["minimum_two_strike_pitches"] = (
+    leaderboard["team_games"]
+    * PITCHES_PER_TEAM_GAME
+)
+
+
+# ==========================================
+# APPLY QUALIFICATION
+# ==========================================
+
+leaderboard = leaderboard[
+    leaderboard["two_strike_pitches"]
+    >= leaderboard["minimum_two_strike_pitches"]
+].copy()
+
+
+# ==========================================
+# PUTAWAY RATE
 # ==========================================
 
 leaderboard["putaway_rate"] = (
     leaderboard["strikeouts"]
     / leaderboard["two_strike_pitches"]
 )
-
-
-# ==========================================
-# MINIMUM SAMPLE SIZE
-# ==========================================
-
-leaderboard = leaderboard[
-    leaderboard["two_strike_pitches"] >= MIN_TWO_STRIKE_PITCHES
-].copy()
 
 
 # ==========================================
@@ -118,9 +182,9 @@ leaderboard = leaderboard.sort_values(
 # ==========================================
 
 print()
-print("=" * 70)
+print("=" * 100)
 print("FOUR-SEAM FASTBALL PUTAWAY RATE")
-print("=" * 70)
+print("=" * 100)
 
 print(
     leaderboard[
@@ -128,12 +192,15 @@ print(
             "player_name",
             "two_strike_pitches",
             "strikeouts",
-            "putaway_rate"
+            "putaway_rate",
+            "team_games",
+            "minimum_two_strike_pitches"
         ]
     ].to_string(
         index=False,
         formatters={
-            "putaway_rate": lambda x: f"{x:.1%}"
+            "putaway_rate": lambda x: f"{x:.1%}",
+            "minimum_two_strike_pitches": lambda x: f"{x:.0f}"
         }
     )
 )
