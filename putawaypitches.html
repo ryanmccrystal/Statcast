@@ -85,9 +85,9 @@
         <thead>
             <tr>
                 <th>Player</th>
-                <th class="rate">Putaway Rate</th>
                 <th class="number">2-Str FF</th>
                 <th class="number">K</th>
+                <th class="rate">Putaway Rate</th>
             </tr>
         </thead>
 
@@ -162,11 +162,11 @@ async function loadLeaderboard() {
 
             row.appendChild(playerCell);
 
-            row.appendChild(rateCell);
-
             row.appendChild(pitchesCell);
-
+            
             row.appendChild(strikeoutsCell);
+            
+            row.appendChild(rateCell);
 
 
             table.appendChild(row);
