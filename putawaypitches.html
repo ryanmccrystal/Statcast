@@ -278,25 +278,32 @@ function createTabs() {
 
         const pitch =
             leaderboardData[type];
-
+    
+        // Only show a tab if at least
+        // one pitcher qualifies.
+    
+        if (pitch.players.length === 0) {
+            return;
+        }
+    
         const button =
             document.createElement("button");
-
+    
         button.className = "tab";
-
+    
         button.textContent =
             pitch.name;
-
+    
         button.onclick = function() {
-
+    
             showPitchType(type);
-
+    
         };
-
+    
         button.dataset.pitchType = type;
-
+    
         tabs.appendChild(button);
-
+    
     });
 }
 
