@@ -27,7 +27,7 @@
         }
 
         h2 {
-            margin: 8px 0 25px 0;
+            margin: 8px 0 20px 0;
             font-size: 22px;
             font-weight: normal;
         }
@@ -37,24 +37,53 @@
             margin-bottom: 20px;
         }
 
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+        }
+
+        .tab {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+            background: white;
+            color: black;
+            border: 1px solid #999999;
+            padding: 7px 12px;
+            cursor: pointer;
+        }
+
+        .tab:hover {
+            background: #eeeeee;
+        }
+
+        .tab.active {
+            background: black;
+            color: white;
+            border-color: black;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 18px;
         }
 
-       th {
+        th {
             text-align: center;
             border-bottom: 2px solid black;
             padding: 8px 6px;
         }
-        
+
         td {
             text-align: center;
             padding: 7px 6px;
             border-bottom: 1px solid #cccccc;
         }
-        
+
         th:first-child,
         td:first-child {
             text-align: left;
@@ -63,6 +92,29 @@
         .error {
             margin-top: 30px;
             font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .tab {
+                font-size: 14px;
+                padding: 6px 9px;
+            }
+
+            table {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -73,22 +125,23 @@
 
     <h1>PUTAWAY PITCHES</h1>
 
-    <h2>Four-Seam Fastball</h2>
+    <h2 id="pitchTitle">Four-Seam Fastball</h2>
 
     <div class="updated" id="updated"></div>
+
+    <div class="tabs" id="tabs"></div>
 
     <table>
         <thead>
             <tr>
                 <th>Player</th>
-                <th class="number">2-Str FF</th>
-                <th class="number">K</th>
-                <th class="rate">Putaway Rate</th>
+                <th id="pitchColumn">2-Str FF</th>
+                <th>K</th>
+                <th>Putaway Rate</th>
             </tr>
         </thead>
 
-        <tbody id="leaderboard">
-        </tbody>
+        <tbody id="leaderboard"></tbody>
     </table>
 
     <div class="error" id="error"></div>
@@ -98,82 +151,68 @@
 
 <script>
 
+let leaderboardData = {};
+
+
+// ==========================================
+// PITCH TYPE ORDER
+// ==========================================
+
+const pitchOrder = [
+    "ff",
+    "si",
+    "fc",
+    "sl",
+    "st",
+    "ch",
+    "fs",
+    "cu",
+    "kc",
+    "sv",
+    "cs",
+    "fa",
+    "fo",
+    "kn",
+    "sc",
+    "ep",
+    "po",
+    "un"
+];
+
+
+// ==========================================
+// LOAD DATA
+// ==========================================
+
 async function loadLeaderboard() {
 
     try {
 
-        const response = await fetch("putaway_pitches.json");
+        const response =
+            await fetch("putaway_pitches.json");
 
         if (!response.ok) {
-            throw new Error("Could not load leaderboard data.");
+            throw new Error(
+                "Could not load leaderboard data."
+            );
         }
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
-        const fourSeam = data.pitch_types.four_seam;
+        leaderboardData =
+            data.pitch_types;
 
-        const players = fourSeam.players;
+        createTabs();
 
-        const table = document.getElementById("leaderboard");
-
-        table.innerHTML = "";
-
-        players.forEach((player) => {
-
-            const row = document.createElement("tr");
-
-            const playerCell = document.createElement("td");
-
-            const rateCell = document.createElement("td");
-
-            const pitchesCell = document.createElement("td");
-
-            const strikeoutsCell = document.createElement("td");
-
-
-            playerCell.textContent =
-                player.player_name.split(", ").reverse().join(" ")
-                + ", "
-                + player.teams.join("/");
-
-
-            rateCell.textContent =
-                (player.putaway_rate * 100).toFixed(1) + "%";
-
-
-            pitchesCell.textContent =
-                player.two_strike_pitches;
-
-
-            strikeoutsCell.textContent =
-                player.strikeouts;
-
-
-            rateCell.className = "rate";
-
-            pitchesCell.className = "number";
-
-            strikeoutsCell.className = "number";
-
-
-            row.appendChild(playerCell);
-
-            row.appendChild(pitchesCell);
-            
-            row.appendChild(strikeoutsCell);
-            
-            row.appendChild(rateCell);
-
-
-            table.appendChild(row);
-
-        });
-
+        showPitchType("ff");
 
         const updated =
             new Date(data.last_updated);
 
-        document.getElementById("updated").textContent =
+        document.getElementById(
+            "updated"
+        ).textContent =
             "Updated " +
             updated.toLocaleString(
                 "en-US",
@@ -186,16 +225,215 @@ async function loadLeaderboard() {
                 }
             );
 
-
     } catch (error) {
 
-        document.getElementById("error").textContent =
+        document.getElementById(
+            "error"
+        ).textContent =
             "Unable to load leaderboard data.";
 
         console.error(error);
     }
 }
 
+
+// ==========================================
+// CREATE TABS
+// ==========================================
+
+function createTabs() {
+
+    const tabs =
+        document.getElementById("tabs");
+
+    tabs.innerHTML = "";
+
+    const availableTypes =
+        Object.keys(leaderboardData);
+
+
+    // First use our preferred order
+    // for pitch types that exist.
+
+    const orderedTypes =
+        pitchOrder.filter(
+            type =>
+                availableTypes.includes(type)
+        );
+
+
+    // Then add any unexpected/new
+    // pitch types at the end.
+
+    availableTypes.forEach(type => {
+
+        if (!orderedTypes.includes(type)) {
+            orderedTypes.push(type);
+        }
+
+    });
+
+
+    orderedTypes.forEach(type => {
+
+        const pitch =
+            leaderboardData[type];
+
+        const button =
+            document.createElement("button");
+
+        button.className = "tab";
+
+        button.textContent =
+            pitch.name;
+
+        button.onclick = function() {
+
+            showPitchType(type);
+
+        };
+
+        button.dataset.pitchType = type;
+
+        tabs.appendChild(button);
+
+    });
+}
+
+
+// ==========================================
+// DISPLAY PITCH TYPE
+// ==========================================
+
+function showPitchType(type) {
+
+    const pitch =
+        leaderboardData[type];
+
+    if (!pitch) {
+        return;
+    }
+
+
+    // Update title
+
+    document.getElementById(
+        "pitchTitle"
+    ).textContent =
+        pitch.name;
+
+
+    // Update pitch-count column
+
+    document.getElementById(
+        "pitchColumn"
+    ).textContent =
+        "2-Str " + pitch.statcast_code;
+
+
+    // Update active tab
+
+    document
+        .querySelectorAll(".tab")
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.pitchType === type
+            );
+
+        });
+
+
+    // Build table
+
+    const table =
+        document.getElementById(
+            "leaderboard"
+        );
+
+    table.innerHTML = "";
+
+
+    pitch.players.forEach(player => {
+
+        const row =
+            document.createElement("tr");
+
+
+        const playerCell =
+            document.createElement("td");
+
+        const pitchesCell =
+            document.createElement("td");
+
+        const strikeoutsCell =
+            document.createElement("td");
+
+        const rateCell =
+            document.createElement("td");
+
+
+        // Convert:
+        // Misiorowski, Jacob
+        //
+        // to:
+        // Jacob Misiorowski, MIL
+
+        const nameParts =
+            player.player_name.split(", ");
+
+        const displayName =
+            nameParts.length === 2
+                ? nameParts[1] + " " + nameParts[0]
+                : player.player_name;
+
+
+        playerCell.textContent =
+            displayName +
+            ", " +
+            player.teams.join("/");
+
+
+        pitchesCell.textContent =
+            player.two_strike_pitches;
+
+
+        strikeoutsCell.textContent =
+            player.strikeouts;
+
+
+        rateCell.textContent =
+            (player.putaway_rate * 100)
+                .toFixed(1) + "%";
+
+
+        row.appendChild(
+            playerCell
+        );
+
+        row.appendChild(
+            pitchesCell
+        );
+
+        row.appendChild(
+            strikeoutsCell
+        );
+
+        row.appendChild(
+            rateCell
+        );
+
+
+        table.appendChild(row);
+
+    });
+}
+
+
+// ==========================================
+// START
+// ==========================================
 
 loadLeaderboard();
 
