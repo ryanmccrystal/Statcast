@@ -1,6 +1,7 @@
 from pybaseball import statcast
 import pandas as pd
 import json
+import math
 from datetime import datetime, timezone
 
 
@@ -13,7 +14,7 @@ END_DATE = "2026-08-07"
 
 # Qualification requirement:
 # 1.0 two-strike pitch of that specific type per team game
-PITCHES_PER_TEAM_GAME = 1.0
+PITCHES_PER_162_GAMES = 50
 
 OUTPUT_FILE = "putaway_pitches.json"
 
@@ -251,8 +252,9 @@ for pitch_type in available_pitch_types:
         "minimum_two_strike_pitches"
     ] = (
         leaderboard["team_games"]
-        * PITCHES_PER_TEAM_GAME
-    )
+        / 162
+        * PITCHES_PER_162_GAMES
+    ).apply(math.ceil)
 
 
     # --------------------------------------
@@ -372,7 +374,7 @@ output = {
     "qualification": {
 
         "minimum_two_strike_pitches_per_team_game":
-            PITCHES_PER_TEAM_GAME
+            PITCHES_PER_162_GAMES
     },
 
     "pitch_types": all_pitch_types
