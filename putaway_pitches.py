@@ -11,14 +11,37 @@ from datetime import datetime, timezone
 START_DATE = "2026-03-01"
 END_DATE = "2026-08-07"
 
-# Statcast pitch type
-PITCH_TYPE = "FF"
-
 # Qualification requirement:
-# 1.0 two-strike pitch of this type per team game
+# 1.0 two-strike pitch of that specific type per team game
 PITCHES_PER_TEAM_GAME = 1.0
 
 OUTPUT_FILE = "putaway_pitches.json"
+
+
+# ==========================================
+# PITCH TYPE NAMES
+# ==========================================
+
+PITCH_TYPE_NAMES = {
+    "FF": "Four-Seam Fastball",
+    "SI": "Sinker",
+    "SL": "Slider",
+    "CH": "Changeup",
+    "ST": "Sweeper",
+    "FC": "Cutter",
+    "CU": "Curveball",
+    "FS": "Splitter",
+    "KC": "Knuckle Curve",
+    "SV": "Slurve",
+    "EP": "Eephus",
+    "FA": "Fastball",
+    "FO": "Forkball",
+    "KN": "Knuckleball",
+    "CS": "Slow Curve",
+    "SC": "Screwball",
+    "PO": "Pitch Out",
+    "UN": "Unknown",
+}
 
 
 # ==========================================
@@ -76,35 +99,18 @@ team_game_counts = (
 
 
 # ==========================================
-# FOUR-SEAM FASTBALLS
-# ==========================================
-
-pitch_data = data[
-    data["pitch_type"] == PITCH_TYPE
-].copy()
-
-print(f"Four-seam fastballs: {len(pitch_data):,}")
-
-
-# ==========================================
-# TWO-STRIKE FOUR-SEAM FASTBALLS
-# ==========================================
-
-two_strike = pitch_data[
-    pitch_data["strikes"] == 2
-].copy()
-
-print(
-    f"Two-strike four-seam fastballs: "
-    f"{len(two_strike):,}"
-)
-
-
-# ==========================================
 # IDENTIFY PITCHER'S TEAM
 # ==========================================
 
-two_strike["pitching_team"] = two_strike.apply(
+# Top of inning:
+#   Away team is batting
+#   Home team is pitching
+#
+# Bottom of inning:
+#   Home team is batting
+#   Away team is pitching
+
+data["pitching_team"] = data.apply(
     lambda row:
         row["home_team"]
         if row["inning_topbot"] == "Top"
@@ -114,138 +120,262 @@ two_strike["pitching_team"] = two_strike.apply(
 
 
 # ==========================================
-# BUILD PITCHER LEADERBOARD
+# GET AVAILABLE PITCH TYPES
 # ==========================================
 
-leaderboard = (
-    two_strike
-    .groupby(["pitcher", "player_name"])
-    .agg(
-        two_strike_pitches=("pitch_type", "size"),
+available_pitch_types = sorted(
+    data["pitch_type"]
+    .dropna()
+    .unique()
+)
 
-        strikeouts=(
-            "events",
-            lambda x: x.isin(
-                ["strikeout", "strikeout_double_play"]
-            ).sum()
+
+print()
+print("Pitch types found:")
+print(", ".join(available_pitch_types))
+
+
+# ==========================================
+# BUILD LEADERBOARDS
+# ==========================================
+
+all_pitch_types = {}
+
+
+for pitch_type in available_pitch_types:
+
+    print()
+    print("=" * 70)
+    print(
+        f"Processing {pitch_type} - "
+        f"{PITCH_TYPE_NAMES.get(pitch_type, pitch_type)}"
+    )
+    print("=" * 70)
+
+
+    # --------------------------------------
+    # KEEP THIS PITCH TYPE
+    # --------------------------------------
+
+    pitch_data = data[
+        data["pitch_type"] == pitch_type
+    ].copy()
+
+
+    # --------------------------------------
+    # TWO-STRIKE PITCHES
+    # --------------------------------------
+
+    two_strike = pitch_data[
+        pitch_data["strikes"] == 2
+    ].copy()
+
+
+    print(
+        f"Two-strike pitches: "
+        f"{len(two_strike):,}"
+    )
+
+
+    # --------------------------------------
+    # BUILD PITCHER LEADERBOARD
+    # --------------------------------------
+
+    if len(two_strike) == 0:
+        all_pitch_types[pitch_type.lower()] = {
+            "name": PITCH_TYPE_NAMES.get(
+                pitch_type,
+                pitch_type
+            ),
+            "statcast_code": pitch_type,
+            "players": []
+        }
+
+        continue
+
+
+    leaderboard = (
+        two_strike
+        .groupby(["pitcher", "player_name"])
+        .agg(
+            two_strike_pitches=(
+                "pitch_type",
+                "size"
+            ),
+
+            strikeouts=(
+                "events",
+                lambda x: x.isin(
+                    [
+                        "strikeout",
+                        "strikeout_double_play"
+                    ]
+                ).sum()
+            ),
+
+            teams=(
+                "pitching_team",
+                lambda x:
+                    sorted(
+                        x.dropna().unique()
+                    )
+            )
+        )
+        .reset_index()
+    )
+
+
+    # --------------------------------------
+    # CALCULATE TEAM GAMES
+    # --------------------------------------
+
+    def calculate_team_games(teams):
+
+        return sum(
+            team_game_counts.get(team, 0)
+            for team in teams
+        )
+
+
+    leaderboard["team_games"] = (
+        leaderboard["teams"]
+        .apply(calculate_team_games)
+    )
+
+
+    # --------------------------------------
+    # QUALIFICATION THRESHOLD
+    # --------------------------------------
+
+    leaderboard[
+        "minimum_two_strike_pitches"
+    ] = (
+        leaderboard["team_games"]
+        * PITCHES_PER_TEAM_GAME
+    )
+
+
+    # --------------------------------------
+    # QUALIFY PITCHERS
+    # --------------------------------------
+
+    leaderboard = leaderboard[
+        leaderboard["two_strike_pitches"]
+        >=
+        leaderboard[
+            "minimum_two_strike_pitches"
+        ]
+    ].copy()
+
+
+    # --------------------------------------
+    # PUTAWAY RATE
+    # --------------------------------------
+
+    leaderboard["putaway_rate"] = (
+        leaderboard["strikeouts"]
+        /
+        leaderboard["two_strike_pitches"]
+    )
+
+
+    # --------------------------------------
+    # SORT
+    # --------------------------------------
+
+    leaderboard = leaderboard.sort_values(
+        "putaway_rate",
+        ascending=False
+    )
+
+
+    # --------------------------------------
+    # CREATE JSON PLAYER LIST
+    # --------------------------------------
+
+    players = []
+
+
+    for _, row in leaderboard.iterrows():
+
+        players.append({
+            "player_id": int(row["pitcher"]),
+
+            "player_name": row[
+                "player_name"
+            ],
+
+            "teams": row["teams"],
+
+            "team_games": int(
+                row["team_games"]
+            ),
+
+            "two_strike_pitches": int(
+                row["two_strike_pitches"]
+            ),
+
+            "strikeouts": int(
+                row["strikeouts"]
+            ),
+
+            "putaway_rate": round(
+                float(
+                    row["putaway_rate"]
+                ),
+                4
+            )
+        })
+
+
+    # --------------------------------------
+    # STORE PITCH TYPE
+    # --------------------------------------
+
+    all_pitch_types[
+        pitch_type.lower()
+    ] = {
+
+        "name": PITCH_TYPE_NAMES.get(
+            pitch_type,
+            pitch_type
         ),
 
-        teams=(
-            "pitching_team",
-            lambda x: sorted(x.dropna().unique())
-        )
-    )
-    .reset_index()
-)
+        "statcast_code": pitch_type,
+
+        "players": players
+    }
 
 
-# ==========================================
-# CALCULATE TEAM GAMES
-# ==========================================
-
-def calculate_team_games(teams):
-    return sum(
-        team_game_counts.get(team, 0)
-        for team in teams
+    print(
+        f"Qualified pitchers: "
+        f"{len(players)}"
     )
 
 
-leaderboard["team_games"] = leaderboard["teams"].apply(
-    calculate_team_games
-)
-
-
 # ==========================================
-# QUALIFICATION THRESHOLD
-# ==========================================
-
-leaderboard["minimum_two_strike_pitches"] = (
-    leaderboard["team_games"]
-    * PITCHES_PER_TEAM_GAME
-)
-
-
-# ==========================================
-# QUALIFY PITCHERS
-# ==========================================
-
-leaderboard = leaderboard[
-    leaderboard["two_strike_pitches"]
-    >= leaderboard["minimum_two_strike_pitches"]
-].copy()
-
-
-# ==========================================
-# CALCULATE PUTAWAY RATE
-# ==========================================
-
-leaderboard["putaway_rate"] = (
-    leaderboard["strikeouts"]
-    / leaderboard["two_strike_pitches"]
-)
-
-
-# ==========================================
-# SORT
-# ==========================================
-
-leaderboard = leaderboard.sort_values(
-    "putaway_rate",
-    ascending=False
-)
-
-
-# ==========================================
-# CREATE JSON DATA
-# ==========================================
-
-players = []
-
-for _, row in leaderboard.iterrows():
-
-    players.append({
-        "player_id": int(row["pitcher"]),
-        "player_name": row["player_name"],
-        "teams": row["teams"],
-        "team_games": int(row["team_games"]),
-        "two_strike_pitches": int(row["two_strike_pitches"]),
-        "strikeouts": int(row["strikeouts"]),
-        "putaway_rate": round(
-            float(row["putaway_rate"]),
-            4
-        )
-    })
-
-
-# ==========================================
-# FINAL JSON
+# CREATE FINAL JSON
 # ==========================================
 
 output = {
+
     "last_updated": datetime.now(
         timezone.utc
-    ).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    ).strftime(
+        "%Y-%m-%dT%H:%M:%SZ"
+    ),
 
     "season": 2026,
 
     "season_type": "regular",
 
     "qualification": {
+
         "minimum_two_strike_pitches_per_team_game":
             PITCHES_PER_TEAM_GAME
     },
 
-    "pitch_types": {
-
-        "four_seam": {
-
-            "name": "Four-Seam Fastball",
-
-            "statcast_code": "FF",
-
-            "players": players
-        }
-    }
+    "pitch_types": all_pitch_types
 }
 
 
@@ -267,9 +397,20 @@ with open(
     )
 
 
+# ==========================================
+# DONE
+# ==========================================
+
 print()
 print("=" * 70)
 print("JSON CREATED")
 print("=" * 70)
-print(f"File: {OUTPUT_FILE}")
-print(f"Qualified pitchers: {len(players)}")
+
+print(
+    f"Pitch types processed: "
+    f"{len(all_pitch_types)}"
+)
+
+print(
+    f"File: {OUTPUT_FILE}"
+)
