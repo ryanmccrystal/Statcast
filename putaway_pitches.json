@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-09T10:29:43Z",
+  "last_updated": "2026-08-10T11:04:18Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -4189,17 +4189,6 @@
           "putaway_rate": 0.2561
         },
         {
-          "player_id": 681895,
-          "player_name": "Sisk, Evan",
-          "teams": [
-            "PIT"
-          ],
-          "team_games": 118,
-          "two_strike_pitches": 47,
-          "strikeouts": 12,
-          "putaway_rate": 0.2553
-        },
-        {
           "player_id": 650556,
           "player_name": "Abreu, Bryan",
           "teams": [
@@ -4208,6 +4197,17 @@
           "team_games": 117,
           "two_strike_pitches": 94,
           "strikeouts": 24,
+          "putaway_rate": 0.2553
+        },
+        {
+          "player_id": 681895,
+          "player_name": "Sisk, Evan",
+          "teams": [
+            "PIT"
+          ],
+          "team_games": 118,
+          "two_strike_pitches": 47,
+          "strikeouts": 12,
           "putaway_rate": 0.2553
         },
         {
@@ -4278,17 +4278,6 @@
           "putaway_rate": 0.252
         },
         {
-          "player_id": 670329,
-          "player_name": "Garcia, Rico",
-          "teams": [
-            "BAL"
-          ],
-          "team_games": 116,
-          "two_strike_pitches": 44,
-          "strikeouts": 11,
-          "putaway_rate": 0.25
-        },
-        {
           "player_id": 677053,
           "player_name": "Nardi, Andrew",
           "teams": [
@@ -4297,6 +4286,17 @@
           "team_games": 117,
           "two_strike_pitches": 56,
           "strikeouts": 14,
+          "putaway_rate": 0.25
+        },
+        {
+          "player_id": 670329,
+          "player_name": "Garcia, Rico",
+          "teams": [
+            "BAL"
+          ],
+          "team_games": 116,
+          "two_strike_pitches": 44,
+          "strikeouts": 11,
           "putaway_rate": 0.25
         },
         {
@@ -4467,17 +4467,6 @@
           "putaway_rate": 0.2391
         },
         {
-          "player_id": 668390,
-          "player_name": "Winn, Cole",
-          "teams": [
-            "TEX"
-          ],
-          "team_games": 116,
-          "two_strike_pitches": 63,
-          "strikeouts": 15,
-          "putaway_rate": 0.2381
-        },
-        {
           "player_id": 665660,
           "player_name": "Alvarado, Elvis",
           "teams": [
@@ -4486,6 +4475,17 @@
           "team_games": 116,
           "two_strike_pitches": 126,
           "strikeouts": 30,
+          "putaway_rate": 0.2381
+        },
+        {
+          "player_id": 668390,
+          "player_name": "Winn, Cole",
+          "teams": [
+            "TEX"
+          ],
+          "team_games": 116,
+          "two_strike_pitches": 63,
+          "strikeouts": 15,
           "putaway_rate": 0.2381
         },
         {
@@ -4522,23 +4522,23 @@
           "putaway_rate": 0.2348
         },
         {
-          "player_id": 699823,
-          "player_name": "Davis, Tyler",
-          "teams": [
-            "CWS"
-          ],
-          "team_games": 115,
-          "two_strike_pitches": 73,
-          "strikeouts": 17,
-          "putaway_rate": 0.2329
-        },
-        {
           "player_id": 686930,
           "player_name": "Barnett, Mason",
           "teams": [
             "ATH"
           ],
           "team_games": 116,
+          "two_strike_pitches": 73,
+          "strikeouts": 17,
+          "putaway_rate": 0.2329
+        },
+        {
+          "player_id": 699823,
+          "player_name": "Davis, Tyler",
+          "teams": [
+            "CWS"
+          ],
+          "team_games": 115,
           "two_strike_pitches": 73,
           "strikeouts": 17,
           "putaway_rate": 0.2329
@@ -4954,17 +4954,6 @@
           "putaway_rate": 0.2168
         },
         {
-          "player_id": 699134,
-          "player_name": "Rodriguez, Bradgley",
-          "teams": [
-            "SD"
-          ],
-          "team_games": 117,
-          "two_strike_pitches": 60,
-          "strikeouts": 13,
-          "putaway_rate": 0.2167
-        },
-        {
           "player_id": 656848,
           "player_name": "Petersen, Michael",
           "teams": [
@@ -4973,6 +4962,17 @@
           "team_games": 117,
           "two_strike_pitches": 180,
           "strikeouts": 39,
+          "putaway_rate": 0.2167
+        },
+        {
+          "player_id": 699134,
+          "player_name": "Rodriguez, Bradgley",
+          "teams": [
+            "SD"
+          ],
+          "team_games": 117,
+          "two_strike_pitches": 60,
+          "strikeouts": 13,
           "putaway_rate": 0.2167
         },
         {
@@ -4998,10 +4998,10 @@
           "putaway_rate": 0.2165
         },
         {
-          "player_id": 663460,
-          "player_name": "Bubic, Kris",
+          "player_id": 664126,
+          "player_name": "Fairbanks, Pete",
           "teams": [
-            "KC"
+            "MIA"
           ],
           "team_games": 117,
           "two_strike_pitches": 102,
@@ -5009,10 +5009,10 @@
           "putaway_rate": 0.2157
         },
         {
-          "player_id": 664126,
-          "player_name": "Fairbanks, Pete",
+          "player_id": 663460,
+          "player_name": "Bubic, Kris",
           "teams": [
-            "MIA"
+            "KC"
           ],
           "team_games": 117,
           "two_strike_pitches": 102,
@@ -5130,28 +5130,6 @@
           "putaway_rate": 0.2113
         },
         {
-          "player_id": 642121,
-          "player_name": "Sulser, Cole",
-          "teams": [
-            "TB"
-          ],
-          "team_games": 115,
-          "two_strike_pitches": 95,
-          "strikeouts": 20,
-          "putaway_rate": 0.2105
-        },
-        {
-          "player_id": 680730,
-          "player_name": "Parker, Mitchell",
-          "teams": [
-            "WSH"
-          ],
-          "team_games": 118,
-          "two_strike_pitches": 57,
-          "strikeouts": 12,
-          "putaway_rate": 0.2105
-        },
-        {
           "player_id": 542888,
           "player_name": "Armstrong, Shawn",
           "teams": [
@@ -5163,6 +5141,17 @@
           "putaway_rate": 0.2105
         },
         {
+          "player_id": 642121,
+          "player_name": "Sulser, Cole",
+          "teams": [
+            "TB"
+          ],
+          "team_games": 115,
+          "two_strike_pitches": 95,
+          "strikeouts": 20,
+          "putaway_rate": 0.2105
+        },
+        {
           "player_id": 656234,
           "player_name": "Bird, Jake",
           "teams": [
@@ -5171,6 +5160,17 @@
           "team_games": 116,
           "two_strike_pitches": 38,
           "strikeouts": 8,
+          "putaway_rate": 0.2105
+        },
+        {
+          "player_id": 680730,
+          "player_name": "Parker, Mitchell",
+          "teams": [
+            "WSH"
+          ],
+          "team_games": 118,
+          "two_strike_pitches": 57,
+          "strikeouts": 12,
           "putaway_rate": 0.2105
         },
         {
@@ -5319,17 +5319,6 @@
           "putaway_rate": 0.2012
         },
         {
-          "player_id": 594580,
-          "player_name": "Moll, Sam",
-          "teams": [
-            "CIN"
-          ],
-          "team_games": 115,
-          "two_strike_pitches": 60,
-          "strikeouts": 12,
-          "putaway_rate": 0.2
-        },
-        {
           "player_id": 544150,
           "player_name": "Suárez, Albert",
           "teams": [
@@ -5341,14 +5330,14 @@
           "putaway_rate": 0.2
         },
         {
-          "player_id": 623149,
-          "player_name": "Sewald, Paul",
+          "player_id": 594580,
+          "player_name": "Moll, Sam",
           "teams": [
-            "AZ"
+            "CIN"
           ],
-          "team_games": 117,
-          "two_strike_pitches": 105,
-          "strikeouts": 21,
+          "team_games": 115,
+          "two_strike_pitches": 60,
+          "strikeouts": 12,
           "putaway_rate": 0.2
         },
         {
@@ -5360,6 +5349,17 @@
           "team_games": 116,
           "two_strike_pitches": 145,
           "strikeouts": 29,
+          "putaway_rate": 0.2
+        },
+        {
+          "player_id": 623149,
+          "player_name": "Sewald, Paul",
+          "teams": [
+            "AZ"
+          ],
+          "team_games": 117,
+          "two_strike_pitches": 105,
+          "strikeouts": 21,
           "putaway_rate": 0.2
         },
         {
@@ -5655,17 +5655,6 @@
           "putaway_rate": 0.1864
         },
         {
-          "player_id": 663436,
-          "player_name": "Martin, Davis",
-          "teams": [
-            "CWS"
-          ],
-          "team_games": 115,
-          "two_strike_pitches": 172,
-          "strikeouts": 32,
-          "putaway_rate": 0.186
-        },
-        {
           "player_id": 690925,
           "player_name": "Beeter, Clayton",
           "teams": [
@@ -5674,6 +5663,17 @@
           "team_games": 118,
           "two_strike_pitches": 43,
           "strikeouts": 8,
+          "putaway_rate": 0.186
+        },
+        {
+          "player_id": 663436,
+          "player_name": "Martin, Davis",
+          "teams": [
+            "CWS"
+          ],
+          "team_games": 115,
+          "two_strike_pitches": 172,
+          "strikeouts": 32,
           "putaway_rate": 0.186
         },
         {
@@ -5710,17 +5710,6 @@
           "putaway_rate": 0.1855
         },
         {
-          "player_id": 572955,
-          "player_name": "Johnson, Pierce",
-          "teams": [
-            "CIN"
-          ],
-          "team_games": 115,
-          "two_strike_pitches": 81,
-          "strikeouts": 15,
-          "putaway_rate": 0.1852
-        },
-        {
           "player_id": 676979,
           "player_name": "Crochet, Garrett",
           "teams": [
@@ -5729,6 +5718,17 @@
           "team_games": 115,
           "two_strike_pitches": 54,
           "strikeouts": 10,
+          "putaway_rate": 0.1852
+        },
+        {
+          "player_id": 572955,
+          "player_name": "Johnson, Pierce",
+          "teams": [
+            "CIN"
+          ],
+          "team_games": 115,
+          "two_strike_pitches": 81,
+          "strikeouts": 15,
           "putaway_rate": 0.1852
         },
         {
@@ -5743,14 +5743,14 @@
           "putaway_rate": 0.1849
         },
         {
-          "player_id": 702273,
-          "player_name": "Schultz, Noah",
+          "player_id": 669302,
+          "player_name": "Gilbert, Logan",
           "teams": [
-            "CWS"
+            "SEA"
           ],
-          "team_games": 115,
-          "two_strike_pitches": 114,
-          "strikeouts": 21,
+          "team_games": 117,
+          "two_strike_pitches": 190,
+          "strikeouts": 35,
           "putaway_rate": 0.1842
         },
         {
@@ -5765,14 +5765,14 @@
           "putaway_rate": 0.1842
         },
         {
-          "player_id": 669302,
-          "player_name": "Gilbert, Logan",
+          "player_id": 702273,
+          "player_name": "Schultz, Noah",
           "teams": [
-            "SEA"
+            "CWS"
           ],
-          "team_games": 117,
-          "two_strike_pitches": 190,
-          "strikeouts": 35,
+          "team_games": 115,
+          "two_strike_pitches": 114,
+          "strikeouts": 21,
           "putaway_rate": 0.1842
         },
         {
@@ -5820,17 +5820,6 @@
           "putaway_rate": 0.181
         },
         {
-          "player_id": 676684,
-          "player_name": "Vest, Will",
-          "teams": [
-            "DET"
-          ],
-          "team_games": 116,
-          "two_strike_pitches": 72,
-          "strikeouts": 13,
-          "putaway_rate": 0.1806
-        },
-        {
           "player_id": 694477,
           "player_name": "Patrick, Chad",
           "teams": [
@@ -5839,6 +5828,17 @@
           "team_games": 116,
           "two_strike_pitches": 144,
           "strikeouts": 26,
+          "putaway_rate": 0.1806
+        },
+        {
+          "player_id": 676684,
+          "player_name": "Vest, Will",
+          "teams": [
+            "DET"
+          ],
+          "team_games": 116,
+          "two_strike_pitches": 72,
+          "strikeouts": 13,
           "putaway_rate": 0.1806
         },
         {
@@ -5953,23 +5953,23 @@
           "putaway_rate": 0.1782
         },
         {
-          "player_id": 621381,
-          "player_name": "Strahm, Matt",
-          "teams": [
-            "KC"
-          ],
-          "team_games": 117,
-          "two_strike_pitches": 90,
-          "strikeouts": 16,
-          "putaway_rate": 0.1778
-        },
-        {
           "player_id": 622663,
           "player_name": "Severino, Luis",
           "teams": [
             "ATH"
           ],
           "team_games": 116,
+          "two_strike_pitches": 90,
+          "strikeouts": 16,
+          "putaway_rate": 0.1778
+        },
+        {
+          "player_id": 621381,
+          "player_name": "Strahm, Matt",
+          "teams": [
+            "KC"
+          ],
+          "team_games": 117,
           "two_strike_pitches": 90,
           "strikeouts": 16,
           "putaway_rate": 0.1778
@@ -6008,17 +6008,6 @@
           "putaway_rate": 0.1772
         },
         {
-          "player_id": 677958,
-          "player_name": "Rocker, Kumar",
-          "teams": [
-            "TEX"
-          ],
-          "team_games": 116,
-          "two_strike_pitches": 68,
-          "strikeouts": 12,
-          "putaway_rate": 0.1765
-        },
-        {
           "player_id": 702275,
           "player_name": "Ritchie, JR",
           "teams": [
@@ -6047,6 +6036,17 @@
             "CIN"
           ],
           "team_games": 115,
+          "two_strike_pitches": 68,
+          "strikeouts": 12,
+          "putaway_rate": 0.1765
+        },
+        {
+          "player_id": 677958,
+          "player_name": "Rocker, Kumar",
+          "teams": [
+            "TEX"
+          ],
+          "team_games": 116,
           "two_strike_pitches": 68,
           "strikeouts": 12,
           "putaway_rate": 0.1765
@@ -6165,17 +6165,6 @@
           "putaway_rate": 0.1741
         },
         {
-          "player_id": 621097,
-          "player_name": "Waguespack, Jacob",
-          "teams": [
-            "DET"
-          ],
-          "team_games": 116,
-          "two_strike_pitches": 46,
-          "strikeouts": 8,
-          "putaway_rate": 0.1739
-        },
-        {
           "player_id": 700249,
           "player_name": "Povich, Cade",
           "teams": [
@@ -6187,15 +6176,15 @@
           "putaway_rate": 0.1739
         },
         {
-          "player_id": 680744,
-          "player_name": "Madden, Ty",
+          "player_id": 621097,
+          "player_name": "Waguespack, Jacob",
           "teams": [
             "DET"
           ],
           "team_games": 116,
-          "two_strike_pitches": 52,
-          "strikeouts": 9,
-          "putaway_rate": 0.1731
+          "two_strike_pitches": 46,
+          "strikeouts": 8,
+          "putaway_rate": 0.1739
         },
         {
           "player_id": 669684,
@@ -6209,16 +6198,15 @@
           "putaway_rate": 0.1731
         },
         {
-          "player_id": 518886,
-          "player_name": "Kimbrel, Craig",
+          "player_id": 680744,
+          "player_name": "Madden, Ty",
           "teams": [
-            "NYM",
-            "TB"
+            "DET"
           ],
-          "team_games": 232,
-          "two_strike_pitches": 116,
-          "strikeouts": 20,
-          "putaway_rate": 0.1724
+          "team_games": 116,
+          "two_strike_pitches": 52,
+          "strikeouts": 9,
+          "putaway_rate": 0.1731
         },
         {
           "player_id": 640448,
@@ -6229,6 +6217,18 @@
           "team_games": 116,
           "two_strike_pitches": 87,
           "strikeouts": 15,
+          "putaway_rate": 0.1724
+        },
+        {
+          "player_id": 518886,
+          "player_name": "Kimbrel, Craig",
+          "teams": [
+            "NYM",
+            "TB"
+          ],
+          "team_games": 232,
+          "two_strike_pitches": 116,
+          "strikeouts": 20,
           "putaway_rate": 0.1724
         },
         {
@@ -6332,17 +6332,6 @@
           "putaway_rate": 0.1678
         },
         {
-          "player_id": 679883,
-          "player_name": "Avila, Luinder",
-          "teams": [
-            "KC"
-          ],
-          "team_games": 117,
-          "two_strike_pitches": 78,
-          "strikeouts": 13,
-          "putaway_rate": 0.1667
-        },
-        {
           "player_id": 666200,
           "player_name": "Luzardo, Jesús",
           "teams": [
@@ -6365,14 +6354,14 @@
           "putaway_rate": 0.1667
         },
         {
-          "player_id": 672282,
-          "player_name": "Detmers, Reid",
+          "player_id": 679883,
+          "player_name": "Avila, Luinder",
           "teams": [
-            "LAA"
+            "KC"
           ],
-          "team_games": 116,
-          "two_strike_pitches": 318,
-          "strikeouts": 53,
+          "team_games": 117,
+          "two_strike_pitches": 78,
+          "strikeouts": 13,
           "putaway_rate": 0.1667
         },
         {
@@ -6396,6 +6385,17 @@
           "team_games": 116,
           "two_strike_pitches": 78,
           "strikeouts": 13,
+          "putaway_rate": 0.1667
+        },
+        {
+          "player_id": 672282,
+          "player_name": "Detmers, Reid",
+          "teams": [
+            "LAA"
+          ],
+          "team_games": 116,
+          "two_strike_pitches": 318,
+          "strikeouts": 53,
           "putaway_rate": 0.1667
         },
         {
@@ -6490,17 +6490,6 @@
           "putaway_rate": 0.1634
         },
         {
-          "player_id": 641793,
-          "player_name": "Littell, Zack",
-          "teams": [
-            "WSH"
-          ],
-          "team_games": 118,
-          "two_strike_pitches": 147,
-          "strikeouts": 24,
-          "putaway_rate": 0.1633
-        },
-        {
           "player_id": 656492,
           "player_name": "Griffin, Foster",
           "teams": [
@@ -6508,6 +6497,17 @@
             "WSH"
           ],
           "team_games": 235,
+          "two_strike_pitches": 147,
+          "strikeouts": 24,
+          "putaway_rate": 0.1633
+        },
+        {
+          "player_id": 641793,
+          "player_name": "Littell, Zack",
+          "teams": [
+            "WSH"
+          ],
+          "team_games": 118,
           "two_strike_pitches": 147,
           "strikeouts": 24,
           "putaway_rate": 0.1633
@@ -6535,13 +6535,12 @@
           "putaway_rate": 0.1615
         },
         {
-          "player_id": 680573,
-          "player_name": "Woods Richardson, Simeon",
+          "player_id": 668964,
+          "player_name": "Myers, Tobias",
           "teams": [
-            "MIN",
-            "TOR"
+            "NYM"
           ],
-          "team_games": 234,
+          "team_games": 117,
           "two_strike_pitches": 93,
           "strikeouts": 15,
           "putaway_rate": 0.1613
@@ -6558,12 +6557,13 @@
           "putaway_rate": 0.1613
         },
         {
-          "player_id": 668964,
-          "player_name": "Myers, Tobias",
+          "player_id": 680573,
+          "player_name": "Woods Richardson, Simeon",
           "teams": [
-            "NYM"
+            "MIN",
+            "TOR"
           ],
-          "team_games": 117,
+          "team_games": 234,
           "two_strike_pitches": 93,
           "strikeouts": 15,
           "putaway_rate": 0.1613
@@ -6591,10 +6591,10 @@
           "putaway_rate": 0.1607
         },
         {
-          "player_id": 688883,
-          "player_name": "Pallette, Peyton",
+          "player_id": 680802,
+          "player_name": "Weiss, Ryan",
           "teams": [
-            "CLE"
+            "HOU"
           ],
           "team_games": 117,
           "two_strike_pitches": 56,
@@ -6602,10 +6602,10 @@
           "putaway_rate": 0.1607
         },
         {
-          "player_id": 680802,
-          "player_name": "Weiss, Ryan",
+          "player_id": 688883,
+          "player_name": "Pallette, Peyton",
           "teams": [
-            "HOU"
+            "CLE"
           ],
           "team_games": 117,
           "two_strike_pitches": 56,
@@ -6657,23 +6657,23 @@
           "putaway_rate": 0.1596
         },
         {
-          "player_id": 690953,
-          "player_name": "Abel, Mick",
-          "teams": [
-            "MIN"
-          ],
-          "team_games": 117,
-          "two_strike_pitches": 44,
-          "strikeouts": 7,
-          "putaway_rate": 0.1591
-        },
-        {
           "player_id": 806960,
           "player_name": "Morales, Luis",
           "teams": [
             "ATH"
           ],
           "team_games": 116,
+          "two_strike_pitches": 44,
+          "strikeouts": 7,
+          "putaway_rate": 0.1591
+        },
+        {
+          "player_id": 690953,
+          "player_name": "Abel, Mick",
+          "teams": [
+            "MIN"
+          ],
+          "team_games": 117,
           "two_strike_pitches": 44,
           "strikeouts": 7,
           "putaway_rate": 0.1591
@@ -6745,12 +6745,12 @@
           "putaway_rate": 0.1582
         },
         {
-          "player_id": 664991,
-          "player_name": "Wolfram, Grant",
+          "player_id": 547973,
+          "player_name": "Chapman, Aroldis",
           "teams": [
-            "BAL"
+            "BOS"
           ],
-          "team_games": 116,
+          "team_games": 115,
           "two_strike_pitches": 38,
           "strikeouts": 6,
           "putaway_rate": 0.1579
@@ -6767,12 +6767,12 @@
           "putaway_rate": 0.1579
         },
         {
-          "player_id": 547973,
-          "player_name": "Chapman, Aroldis",
+          "player_id": 664991,
+          "player_name": "Wolfram, Grant",
           "teams": [
-            "BOS"
+            "BAL"
           ],
-          "team_games": 115,
+          "team_games": 116,
           "two_strike_pitches": 38,
           "strikeouts": 6,
           "putaway_rate": 0.1579
@@ -6922,10 +6922,10 @@
           "putaway_rate": 0.1463
         },
         {
-          "player_id": 671936,
-          "player_name": "Macko, Adam",
+          "player_id": 641745,
+          "player_name": "Keller, Brad",
           "teams": [
-            "TOR"
+            "PHI"
           ],
           "team_games": 117,
           "two_strike_pitches": 48,
@@ -6933,10 +6933,10 @@
           "putaway_rate": 0.1458
         },
         {
-          "player_id": 641745,
-          "player_name": "Keller, Brad",
+          "player_id": 671936,
+          "player_name": "Macko, Adam",
           "teams": [
-            "PHI"
+            "TOR"
           ],
           "team_games": 117,
           "two_strike_pitches": 48,
@@ -6964,17 +6964,6 @@
           "two_strike_pitches": 62,
           "strikeouts": 9,
           "putaway_rate": 0.1452
-        },
-        {
-          "player_id": 663362,
-          "player_name": "Waldron, Matt",
-          "teams": [
-            "SD"
-          ],
-          "team_games": 117,
-          "two_strike_pitches": 42,
-          "strikeouts": 6,
-          "putaway_rate": 0.1429
         },
         {
           "player_id": 673929,
@@ -7018,6 +7007,17 @@
           "team_games": 118,
           "two_strike_pitches": 112,
           "strikeouts": 16,
+          "putaway_rate": 0.1429
+        },
+        {
+          "player_id": 663362,
+          "player_name": "Waldron, Matt",
+          "teams": [
+            "SD"
+          ],
+          "team_games": 117,
+          "two_strike_pitches": 42,
+          "strikeouts": 6,
           "putaway_rate": 0.1429
         },
         {
@@ -7109,18 +7109,6 @@
           "putaway_rate": 0.1373
         },
         {
-          "player_id": 519141,
-          "player_name": "Pomeranz, Drew",
-          "teams": [
-            "CHC",
-            "LAA"
-          ],
-          "team_games": 233,
-          "two_strike_pitches": 73,
-          "strikeouts": 10,
-          "putaway_rate": 0.137
-        },
-        {
           "player_id": 669199,
           "player_name": "Bachar, Lake",
           "teams": [
@@ -7128,6 +7116,18 @@
             "PIT"
           ],
           "team_games": 235,
+          "two_strike_pitches": 73,
+          "strikeouts": 10,
+          "putaway_rate": 0.137
+        },
+        {
+          "player_id": 519141,
+          "player_name": "Pomeranz, Drew",
+          "teams": [
+            "CHC",
+            "LAA"
+          ],
+          "team_games": 233,
           "two_strike_pitches": 73,
           "strikeouts": 10,
           "putaway_rate": 0.137
@@ -7144,14 +7144,14 @@
           "putaway_rate": 0.1366
         },
         {
-          "player_id": 607192,
-          "player_name": "Glasnow, Tyler",
+          "player_id": 676755,
+          "player_name": "Mattson, Isaac",
           "teams": [
-            "LAD"
+            "PIT"
           ],
-          "team_games": 116,
-          "two_strike_pitches": 44,
-          "strikeouts": 6,
+          "team_games": 118,
+          "two_strike_pitches": 154,
+          "strikeouts": 21,
           "putaway_rate": 0.1364
         },
         {
@@ -7166,14 +7166,14 @@
           "putaway_rate": 0.1364
         },
         {
-          "player_id": 676755,
-          "player_name": "Mattson, Isaac",
+          "player_id": 607192,
+          "player_name": "Glasnow, Tyler",
           "teams": [
-            "PIT"
+            "LAD"
           ],
-          "team_games": 118,
-          "two_strike_pitches": 154,
-          "strikeouts": 21,
+          "team_games": 116,
+          "two_strike_pitches": 44,
+          "strikeouts": 6,
           "putaway_rate": 0.1364
         },
         {
@@ -7199,12 +7199,12 @@
           "putaway_rate": 0.1358
         },
         {
-          "player_id": 682995,
-          "player_name": "Barco, Hunter",
+          "player_id": 687931,
+          "player_name": "Whisenhunt, Carson",
           "teams": [
-            "PIT"
+            "SF"
           ],
-          "team_games": 118,
+          "team_games": 116,
           "two_strike_pitches": 37,
           "strikeouts": 5,
           "putaway_rate": 0.1351
@@ -7221,12 +7221,12 @@
           "putaway_rate": 0.1351
         },
         {
-          "player_id": 687931,
-          "player_name": "Whisenhunt, Carson",
+          "player_id": 682995,
+          "player_name": "Barco, Hunter",
           "teams": [
-            "SF"
+            "PIT"
           ],
-          "team_games": 116,
+          "team_games": 118,
           "two_strike_pitches": 37,
           "strikeouts": 5,
           "putaway_rate": 0.1351
@@ -7342,17 +7342,6 @@
           "putaway_rate": 0.13
         },
         {
-          "player_id": 664299,
-          "player_name": "Javier, Cristian",
-          "teams": [
-            "HOU"
-          ],
-          "team_games": 117,
-          "two_strike_pitches": 77,
-          "strikeouts": 10,
-          "putaway_rate": 0.1299
-        },
-        {
           "player_id": 669461,
           "player_name": "Liberatore, Matthew",
           "teams": [
@@ -7370,6 +7359,17 @@
             "TB"
           ],
           "team_games": 115,
+          "two_strike_pitches": 77,
+          "strikeouts": 10,
+          "putaway_rate": 0.1299
+        },
+        {
+          "player_id": 664299,
+          "player_name": "Javier, Cristian",
+          "teams": [
+            "HOU"
+          ],
+          "team_games": 117,
           "two_strike_pitches": 77,
           "strikeouts": 10,
           "putaway_rate": 0.1299
@@ -7454,14 +7454,14 @@
           "putaway_rate": 0.1257
         },
         {
-          "player_id": 689296,
-          "player_name": "Nunez, Anthony",
+          "player_id": 669438,
+          "player_name": "Englert, Mason",
           "teams": [
-            "BAL"
+            "TB"
           ],
-          "team_games": 116,
-          "two_strike_pitches": 56,
-          "strikeouts": 7,
+          "team_games": 115,
+          "two_strike_pitches": 40,
+          "strikeouts": 5,
           "putaway_rate": 0.125
         },
         {
@@ -7476,14 +7476,14 @@
           "putaway_rate": 0.125
         },
         {
-          "player_id": 669438,
-          "player_name": "Englert, Mason",
+          "player_id": 689296,
+          "player_name": "Nunez, Anthony",
           "teams": [
-            "TB"
+            "BAL"
           ],
-          "team_games": 115,
-          "two_strike_pitches": 40,
-          "strikeouts": 5,
+          "team_games": 116,
+          "two_strike_pitches": 56,
+          "strikeouts": 7,
           "putaway_rate": 0.125
         },
         {
@@ -7586,17 +7586,6 @@
           "putaway_rate": 0.1111
         },
         {
-          "player_id": 656550,
-          "player_name": "Holmes, Grant",
-          "teams": [
-            "ATL"
-          ],
-          "team_games": 116,
-          "two_strike_pitches": 128,
-          "strikeouts": 14,
-          "putaway_rate": 0.1094
-        },
-        {
           "player_id": 453286,
           "player_name": "Scherzer, Max",
           "teams": [
@@ -7605,6 +7594,17 @@
           "team_games": 117,
           "two_strike_pitches": 64,
           "strikeouts": 7,
+          "putaway_rate": 0.1094
+        },
+        {
+          "player_id": 656550,
+          "player_name": "Holmes, Grant",
+          "teams": [
+            "ATL"
+          ],
+          "team_games": 116,
+          "two_strike_pitches": 128,
+          "strikeouts": 14,
           "putaway_rate": 0.1094
         },
         {
@@ -7674,8 +7674,8 @@
           "putaway_rate": 0.1068
         },
         {
-          "player_id": 665795,
-          "player_name": "Cabrera, Edward",
+          "player_id": 571948,
+          "player_name": "Milner, Hoby",
           "teams": [
             "CHC"
           ],
@@ -7696,8 +7696,8 @@
           "putaway_rate": 0.1064
         },
         {
-          "player_id": 571948,
-          "player_name": "Milner, Hoby",
+          "player_id": 665795,
+          "player_name": "Cabrera, Edward",
           "teams": [
             "CHC"
           ],
@@ -7763,23 +7763,23 @@
           "putaway_rate": 0.1017
         },
         {
-          "player_id": 687209,
-          "player_name": "Maxwell, Zach",
-          "teams": [
-            "CIN"
-          ],
-          "team_games": 115,
-          "two_strike_pitches": 50,
-          "strikeouts": 5,
-          "putaway_rate": 0.1
-        },
-        {
           "player_id": 683000,
           "player_name": "Cornelio, Riley",
           "teams": [
             "WSH"
           ],
           "team_games": 118,
+          "two_strike_pitches": 50,
+          "strikeouts": 5,
+          "putaway_rate": 0.1
+        },
+        {
+          "player_id": 687209,
+          "player_name": "Maxwell, Zach",
+          "teams": [
+            "CIN"
+          ],
+          "team_games": 115,
           "two_strike_pitches": 50,
           "strikeouts": 5,
           "putaway_rate": 0.1
