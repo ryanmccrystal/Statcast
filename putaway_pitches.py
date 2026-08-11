@@ -14,7 +14,8 @@ END_DATE = "2026-08-07"
 
 # Qualification:
 # 50 two-strike pitches per 162 team games
-PITCHES_PER_162_GAMES = 50
+OVERALL_PITCHES_PER_162_GAMES = 50
+SPLIT_PITCHES_PER_162_GAMES = 40
 
 OUTPUT_FILE = "putaway_pitches.json"
 
@@ -151,7 +152,10 @@ def calculate_team_games(teams):
 # BUILD ONE LEADERBOARD
 # ==========================================
 
-def build_leaderboard(pitch_data):
+def build_leaderboard(
+    pitch_data,
+    pitches_per_162_games
+):
 
     # --------------------------------------
     # TWO-STRIKE PITCHES
@@ -219,7 +223,7 @@ def build_leaderboard(pitch_data):
     ] = (
         leaderboard["team_games"]
         / 162
-        * PITCHES_PER_162_GAMES
+        * pitches_per_162_games
     ).apply(math.ceil)
 
 
@@ -329,7 +333,8 @@ for pitch_type in available_pitch_types:
     # --------------------------------------
 
     overall_players = build_leaderboard(
-        pitch_data
+        pitch_data,
+        OVERALL_PITCHES_PER_162_GAMES
     )
 
     print(
@@ -347,7 +352,8 @@ for pitch_type in available_pitch_types:
     ].copy()
 
     rhb_players = build_leaderboard(
-        vs_rhb
+        vs_rhb,
+        SPLIT_PITCHES_PER_162_GAMES
     )
 
     print(
@@ -365,7 +371,8 @@ for pitch_type in available_pitch_types:
     ].copy()
 
     lhb_players = build_leaderboard(
-        vs_lhb
+        vs_lhb,
+        SPLIT_PITCHES_PER_162_GAMES
     )
 
     print(
@@ -412,8 +419,11 @@ output = {
 
     "qualification": {
 
-        "minimum_two_strike_pitches_per_162_games":
-            PITCHES_PER_162_GAMES
+        "overall_two_strike_pitches_per_162_games":
+            OVERALL_PITCHES_PER_162_GAMES,
+    
+        "split_two_strike_pitches_per_162_games":
+            SPLIT_PITCHES_PER_162_GAMES
     },
 
     "pitch_types": all_pitch_types
