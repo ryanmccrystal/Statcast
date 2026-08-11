@@ -37,7 +37,42 @@
             margin-bottom: 20px;
         }
 
-        .tabs {
+        /* ==============================
+           HANDEDNESS FILTERS
+           ============================== */
+
+        .handedness-tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .handedness-tab {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+            background: white;
+            color: black;
+            border: 1px solid #999999;
+            padding: 7px 14px;
+            cursor: pointer;
+        }
+
+        .handedness-tab:hover {
+            background: #eeeeee;
+        }
+
+        .handedness-tab.active {
+            background: black;
+            color: white;
+            border-color: black;
+        }
+
+
+        /* ==============================
+           PITCH TYPE TABS
+           ============================== */
+
+        .pitch-tabs {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
@@ -46,7 +81,7 @@
             padding-bottom: 8px;
         }
 
-        .tab {
+        .pitch-tab {
             font-family: "Times New Roman", Times, serif;
             font-size: 16px;
             background: white;
@@ -56,15 +91,20 @@
             cursor: pointer;
         }
 
-        .tab:hover {
+        .pitch-tab:hover {
             background: #eeeeee;
         }
 
-        .tab.active {
+        .pitch-tab.active {
             background: black;
             color: white;
             border-color: black;
         }
+
+
+        /* ==============================
+           TABLE
+           ============================== */
 
         table {
             width: 100%;
@@ -89,12 +129,23 @@
             text-align: left;
         }
 
+
+        /* ==============================
+           ERROR
+           ============================== */
+
         .error {
             margin-top: 30px;
             font-size: 18px;
         }
 
+
+        /* ==============================
+           MOBILE
+           ============================== */
+
         @media (max-width: 600px) {
+
             body {
                 padding: 25px 10px;
             }
@@ -107,7 +158,8 @@
                 font-size: 20px;
             }
 
-            .tab {
+            .handedness-tab,
+            .pitch-tab {
                 font-size: 14px;
                 padding: 6px 9px;
             }
@@ -129,20 +181,69 @@
 
     <div class="updated" id="updated"></div>
 
-    <div class="tabs" id="tabs"></div>
+
+    <!-- ==============================
+         HANDEDNESS FILTERS
+         ============================== -->
+
+    <div class="handedness-tabs" id="handednessTabs">
+
+        <button
+            class="handedness-tab active"
+            data-split="overall">
+            Overall
+        </button>
+
+        <button
+            class="handedness-tab"
+            data-split="vs_rhb">
+            vs RHB
+        </button>
+
+        <button
+            class="handedness-tab"
+            data-split="vs_lhb">
+            vs LHB
+        </button>
+
+    </div>
+
+
+    <!-- ==============================
+         PITCH TYPE TABS
+         ============================== -->
+
+    <div class="pitch-tabs" id="pitchTabs"></div>
+
+
+    <!-- ==============================
+         LEADERBOARD
+         ============================== -->
 
     <table>
+
         <thead>
+
             <tr>
+
                 <th>Player</th>
-                <th id="pitchColumn">2-Str FF</th>
+
+                <th id="pitchColumn">
+                    2-Str FF
+                </th>
+
                 <th>K</th>
+
                 <th>Putaway Rate</th>
+
             </tr>
+
         </thead>
 
         <tbody id="leaderboard"></tbody>
+
     </table>
+
 
     <div class="error" id="error"></div>
 
@@ -152,6 +253,10 @@
 <script>
 
 let leaderboardData = {};
+
+let currentSplit = "overall";
+
+let currentPitchType = "ff";
 
 
 // ==========================================
@@ -192,9 +297,11 @@ async function loadLeaderboard() {
             await fetch("putaway_pitches.json");
 
         if (!response.ok) {
+
             throw new Error(
                 "Could not load leaderboard data."
             );
+
         }
 
         const data =
@@ -203,17 +310,51 @@ async function loadLeaderboard() {
         leaderboardData =
             data.pitch_types;
 
-        createTabs();
 
-        showPitchType("ff");
+        // Set up handedness buttons
+
+        setupHandednessTabs();
+
+
+        // Build pitch tabs for Overall
+
+        createPitchTabs();
+
+
+        // Find first available pitch type
+
+        const firstPitch =
+            getFirstQualifiedPitchType(
+                currentSplit
+            );
+
+
+        if (firstPitch) {
+
+            currentPitchType =
+                firstPitch;
+
+            showPitchType(
+                currentPitchType
+            );
+
+        }
+
+
+        // Updated timestamp
 
         const updated =
-            new Date(data.last_updated);
+            new Date(
+                data.last_updated
+            );
+
 
         document.getElementById(
             "updated"
         ).textContent =
+
             "Updated " +
+
             updated.toLocaleString(
                 "en-US",
                 {
@@ -225,6 +366,7 @@ async function loadLeaderboard() {
                 }
             );
 
+
     } catch (error) {
 
         document.getElementById(
@@ -233,27 +375,128 @@ async function loadLeaderboard() {
             "Unable to load leaderboard data.";
 
         console.error(error);
+
     }
+
 }
 
 
 // ==========================================
-// CREATE TABS
+// HANDEDNESS TABS
 // ==========================================
 
-function createTabs() {
+function setupHandednessTabs() {
 
-    const tabs =
-        document.getElementById("tabs");
+    const buttons =
+        document.querySelectorAll(
+            ".handedness-tab"
+        );
 
-    tabs.innerHTML = "";
+
+    buttons.forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                const split =
+                    button.dataset.split;
+
+
+                currentSplit =
+                    split;
+
+
+                buttons.forEach(
+                    otherButton => {
+
+                        otherButton.classList.toggle(
+                            "active",
+                            otherButton === button
+                        );
+
+                    }
+                );
+
+
+                // Rebuild pitch tabs because
+                // qualification can differ
+                // between Overall/RHB/LHB.
+
+                createPitchTabs();
+
+
+                // Keep the current pitch if
+                // it has qualified pitchers.
+                // Otherwise select the first
+                // available pitch.
+
+                const currentPitch =
+                    leaderboardData[
+                        currentPitchType
+                    ];
+
+
+                if (
+                    currentPitch &&
+                    currentPitch[
+                        currentSplit
+                    ] &&
+                    currentPitch[
+                        currentSplit
+                    ].length > 0
+                ) {
+
+                    showPitchType(
+                        currentPitchType
+                    );
+
+                } else {
+
+                    const firstPitch =
+                        getFirstQualifiedPitchType(
+                            currentSplit
+                        );
+
+
+                    if (firstPitch) {
+
+                        currentPitchType =
+                            firstPitch;
+
+                        showPitchType(
+                            firstPitch
+                        );
+
+                    } else {
+
+                        clearLeaderboard();
+
+                    }
+
+                }
+
+            }
+        );
+
+    });
+
+}
+
+
+// ==========================================
+// GET FIRST QUALIFIED PITCH TYPE
+// ==========================================
+
+function getFirstQualifiedPitchType(
+    split
+) {
 
     const availableTypes =
-        Object.keys(leaderboardData);
+        Object.keys(
+            leaderboardData
+        );
 
-
-    // First use our preferred order
-    // for pitch types that exist.
 
     const orderedTypes =
         pitchOrder.filter(
@@ -262,54 +505,149 @@ function createTabs() {
         );
 
 
-    // Then add any unexpected/new
-    // pitch types at the end.
+    // Add any unexpected pitch types
+    // after our preferred order.
 
-    availableTypes.forEach(type => {
+    availableTypes.forEach(
+        type => {
 
-        if (!orderedTypes.includes(type)) {
-            orderedTypes.push(type);
+            if (
+                !orderedTypes.includes(type)
+            ) {
+
+                orderedTypes.push(type);
+
+            }
+
         }
+    );
 
-    });
 
+    return orderedTypes.find(
+        type => {
 
-    orderedTypes.forEach(type => {
+            const pitch =
+                leaderboardData[type];
 
-        const pitch =
-            leaderboardData[type];
-    
-        // Only show a tab if at least
-        // one pitcher qualifies.
-    
-        if (pitch.players.length === 0) {
-            return;
+            return (
+                pitch &&
+                pitch[split] &&
+                pitch[split].length > 0
+            );
+
         }
-    
-        const button =
-            document.createElement("button");
-    
-        button.className = "tab";
-    
-        button.textContent =
-            pitch.name;
-    
-        button.onclick = function() {
-    
-            showPitchType(type);
-    
-        };
-    
-        button.dataset.pitchType = type;
-    
-        tabs.appendChild(button);
-    
-    });
+    ) || null;
+
 }
 
 
 // ==========================================
-// DISPLAY PITCH TYPE
+// CREATE PITCH TABS
+// ==========================================
+
+function createPitchTabs() {
+
+    const tabs =
+        document.getElementById(
+            "pitchTabs"
+        );
+
+
+    tabs.innerHTML = "";
+
+
+    const availableTypes =
+        Object.keys(
+            leaderboardData
+        );
+
+
+    const orderedTypes =
+        pitchOrder.filter(
+            type =>
+                availableTypes.includes(type)
+        );
+
+
+    availableTypes.forEach(
+        type => {
+
+            if (
+                !orderedTypes.includes(type)
+            ) {
+
+                orderedTypes.push(type);
+
+            }
+
+        }
+    );
+
+
+    orderedTypes.forEach(
+        type => {
+
+            const pitch =
+                leaderboardData[type];
+
+
+            // Only show the pitch tab if
+            // there is at least one
+            // qualified pitcher for the
+            // currently selected split.
+
+            if (
+                !pitch ||
+                !pitch[currentSplit] ||
+                pitch[currentSplit].length === 0
+            ) {
+
+                return;
+
+            }
+
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "pitch-tab";
+
+
+            button.textContent =
+                pitch.name;
+
+
+            button.dataset.pitchType =
+                type;
+
+
+            button.onclick =
+                function() {
+
+                    currentPitchType =
+                        type;
+
+                    showPitchType(type);
+
+                };
+
+
+            tabs.appendChild(
+                button
+            );
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// SHOW PITCH TYPE
 // ==========================================
 
 function showPitchType(type) {
@@ -317,9 +655,27 @@ function showPitchType(type) {
     const pitch =
         leaderboardData[type];
 
+
     if (!pitch) {
+
         return;
+
     }
+
+
+    const players =
+        pitch[currentSplit];
+
+
+    if (!players) {
+
+        return;
+
+    }
+
+
+    currentPitchType =
+        type;
 
 
     // Update title
@@ -335,13 +691,16 @@ function showPitchType(type) {
     document.getElementById(
         "pitchColumn"
     ).textContent =
-        "2-Str " + pitch.statcast_code;
+        "2-Str " +
+        pitch.statcast_code;
 
 
-    // Update active tab
+    // Update active pitch tab
 
     document
-        .querySelectorAll(".tab")
+        .querySelectorAll(
+            ".pitch-tab"
+        )
         .forEach(button => {
 
             button.classList.toggle(
@@ -352,89 +711,143 @@ function showPitchType(type) {
         });
 
 
-    // Build table
+    // Clear table
 
     const table =
         document.getElementById(
             "leaderboard"
         );
 
+
     table.innerHTML = "";
 
 
-    pitch.players.forEach(player => {
+    // Build rows
 
-        const row =
-            document.createElement("tr");
+    players.forEach(
+        player => {
 
-
-        const playerCell =
-            document.createElement("td");
-
-        const pitchesCell =
-            document.createElement("td");
-
-        const strikeoutsCell =
-            document.createElement("td");
-
-        const rateCell =
-            document.createElement("td");
+            const row =
+                document.createElement(
+                    "tr"
+                );
 
 
-        // Convert:
-        // Misiorowski, Jacob
-        //
-        // to:
-        // Jacob Misiorowski, MIL
-
-        const nameParts =
-            player.player_name.split(", ");
-
-        const displayName =
-            nameParts.length === 2
-                ? nameParts[1] + " " + nameParts[0]
-                : player.player_name;
+            const playerCell =
+                document.createElement(
+                    "td"
+                );
 
 
-        playerCell.textContent =
-            displayName +
-            ", " +
-            player.teams.join("/");
+            const pitchesCell =
+                document.createElement(
+                    "td"
+                );
 
 
-        pitchesCell.textContent =
-            player.two_strike_pitches;
+            const strikeoutsCell =
+                document.createElement(
+                    "td"
+                );
 
 
-        strikeoutsCell.textContent =
-            player.strikeouts;
+            const rateCell =
+                document.createElement(
+                    "td"
+                );
 
 
-        rateCell.textContent =
-            (player.putaway_rate * 100)
-                .toFixed(1) + "%";
+            // Convert:
+            //
+            // Misiorowski, Jacob
+            //
+            // to:
+            //
+            // Jacob Misiorowski, MIL
+
+            const nameParts =
+                player.player_name.split(
+                    ", "
+                );
 
 
-        row.appendChild(
-            playerCell
-        );
-
-        row.appendChild(
-            pitchesCell
-        );
-
-        row.appendChild(
-            strikeoutsCell
-        );
-
-        row.appendChild(
-            rateCell
-        );
+            const displayName =
+                nameParts.length === 2
+                    ? nameParts[1] +
+                      " " +
+                      nameParts[0]
+                    : player.player_name;
 
 
-        table.appendChild(row);
+            playerCell.textContent =
+                displayName +
+                ", " +
+                player.teams.join("/");
 
-    });
+
+            pitchesCell.textContent =
+                player.two_strike_pitches;
+
+
+            strikeoutsCell.textContent =
+                player.strikeouts;
+
+
+            rateCell.textContent =
+                (
+                    player.putaway_rate *
+                    100
+                ).toFixed(1) + "%";
+
+
+            row.appendChild(
+                playerCell
+            );
+
+
+            row.appendChild(
+                pitchesCell
+            );
+
+
+            row.appendChild(
+                strikeoutsCell
+            );
+
+
+            row.appendChild(
+                rateCell
+            );
+
+
+            table.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// CLEAR LEADERBOARD
+// ==========================================
+
+function clearLeaderboard() {
+
+    document.getElementById(
+        "leaderboard"
+    ).innerHTML = "";
+
+    document.getElementById(
+        "pitchTitle"
+    ).textContent = "";
+
+    document.getElementById(
+        "pitchColumn"
+    ).textContent = "";
+
 }
 
 
