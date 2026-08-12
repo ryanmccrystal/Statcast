@@ -12,9 +12,14 @@ from datetime import datetime, timezone
 START_DATE = "2026-03-01"
 END_DATE = "2026-08-07"
 
-# Qualification:
+# League leaderboard qualification:
 # 50 two-strike pitches per 162 team games
+# Overall
 OVERALL_PITCHES_PER_162_GAMES = 50
+
+# League leaderboard qualification:
+# 40 two-strike pitches per 162 team games
+# RHB/LHB splits
 SPLIT_PITCHES_PER_162_GAMES = 40
 
 OUTPUT_FILE = "putaway_pitches.json"
@@ -122,7 +127,7 @@ data["pitching_team"] = data.apply(
 
 
 # ==========================================
-# GET AVAILABLE PITCH TYPES
+# AVAILABLE PITCH TYPES
 # ==========================================
 
 available_pitch_types = sorted(
@@ -149,7 +154,7 @@ def calculate_team_games(teams):
 
 
 # ==========================================
-# BUILD ONE LEADERBOARD
+# BUILD QUALIFIED LEADERBOARD
 # ==========================================
 
 def build_leaderboard(
@@ -266,13 +271,18 @@ def build_leaderboard(
     for _, row in leaderboard.iterrows():
 
         players.append({
-            "player_id": int(row["pitcher"]),
+
+            "player_id": int(
+                row["pitcher"]
+            ),
 
             "player_name": row[
                 "player_name"
             ],
 
-            "teams": row["teams"],
+            "teams": row[
+                "teams"
+            ],
 
             "team_games": int(
                 row["team_games"]
@@ -298,7 +308,257 @@ def build_leaderboard(
 
 
 # ==========================================
-# BUILD ALL PITCH TYPES
+# BUILD INDIVIDUAL PITCHER DATA
+# ==========================================
+
+def build_individual_pitchers(
+    pitch_data
+):
+
+    # Only two-strike pitches are relevant
+    two_strike = pitch_data[
+        pitch_data["strikes"] == 2
+    ].copy()
+
+    if len(two_strike) == 0:
+        return {}
+
+
+    pitchers = {}
+
+
+    # --------------------------------------
+    # SPLITS
+    # --------------------------------------
+
+    splits = {
+
+        "overall": two_strike,
+
+        "vs_rhb": two_strike[
+            two_strike["stand"] == "R"
+        ],
+
+        "vs_lhb": two_strike[
+            two_strike["stand"] == "L"
+        ]
+    }
+
+
+    # --------------------------------------
+    # PROCESS EACH SPLIT
+    # --------------------------------------
+
+    for split_name, split_data in splits.items():
+
+        if len(split_data) == 0:
+            continue
+
+
+        # Total two-strike pitches for
+        # each pitcher in this split
+
+        pitcher_totals = (
+            split_data
+            .groupby("pitcher")
+            .size()
+            .to_dict()
+        )
+
+
+        # ----------------------------------
+        # PITCHER + PITCH TYPE
+        # ----------------------------------
+
+        grouped = (
+            split_data
+            .groupby(
+                [
+                    "pitcher",
+                    "player_name",
+                    "pitch_type"
+                ]
+            )
+            .agg(
+
+                two_strike_pitches=(
+                    "pitch_type",
+                    "size"
+                ),
+
+                strikeouts=(
+                    "events",
+                    lambda x: x.isin(
+                        [
+                            "strikeout",
+                            "strikeout_double_play"
+                        ]
+                    ).sum()
+                ),
+
+                teams=(
+                    "pitching_team",
+                    lambda x:
+                        sorted(
+                            x.dropna().unique()
+                        )
+                )
+            )
+            .reset_index()
+        )
+
+
+        # ----------------------------------
+        # BUILD PITCHER RECORDS
+        # ----------------------------------
+
+        for _, row in grouped.iterrows():
+
+            pitcher_id = int(
+                row["pitcher"]
+            )
+
+            if pitcher_id not in pitchers:
+
+                pitchers[pitcher_id] = {
+
+                    "player_name":
+                        row["player_name"],
+
+                    "teams":
+                        [],
+
+                    "overall": [],
+
+                    "vs_rhb": [],
+
+                    "vs_lhb": []
+                }
+
+
+            # ----------------------------------
+            # ADD TEAMS
+            # ----------------------------------
+
+            for team in row["teams"]:
+
+                if team not in pitchers[
+                    pitcher_id
+                ]["teams"]:
+
+                    pitchers[
+                        pitcher_id
+                    ]["teams"].append(team)
+
+
+            # ----------------------------------
+            # CALCULATE USAGE
+            # ----------------------------------
+
+            total_two_strike_pitches = (
+                pitcher_totals[
+                    pitcher_id
+                ]
+            )
+
+            usage = (
+                row["two_strike_pitches"]
+                /
+                total_two_strike_pitches
+            )
+
+
+            # ----------------------------------
+            # CALCULATE PUTAWAY RATE
+            # ----------------------------------
+
+            if row["two_strike_pitches"] > 0:
+
+                putaway_rate = (
+                    row["strikeouts"]
+                    /
+                    row["two_strike_pitches"]
+                )
+
+            else:
+
+                putaway_rate = 0
+
+
+            # ----------------------------------
+            # ADD PITCH
+            # ----------------------------------
+
+            pitch_record = {
+
+                "pitch_type":
+                    row["pitch_type"],
+
+                "pitch_name":
+                    PITCH_TYPE_NAMES.get(
+                        row["pitch_type"],
+                        row["pitch_type"]
+                    ),
+
+                "usage": round(
+                    float(usage),
+                    4
+                ),
+
+                "two_strike_pitches":
+                    int(
+                        row[
+                            "two_strike_pitches"
+                        ]
+                    ),
+
+                "strikeouts":
+                    int(
+                        row["strikeouts"]
+                    ),
+
+                "putaway_rate": round(
+                    float(
+                        putaway_rate
+                    ),
+                    4
+                )
+            }
+
+
+            pitchers[
+                pitcher_id
+            ][split_name].append(
+                pitch_record
+            )
+
+
+    # --------------------------------------
+    # SORT PITCHES BY USAGE
+    # --------------------------------------
+
+    for pitcher in pitchers.values():
+
+        for split in [
+            "overall",
+            "vs_rhb",
+            "vs_lhb"
+        ]:
+
+            pitcher[split].sort(
+                key=lambda x:
+                    x["usage"],
+                reverse=True
+            )
+
+        pitcher["teams"].sort()
+
+
+    return pitchers
+
+
+# ==========================================
+# BUILD LEAGUE LEADERBOARDS
 # ==========================================
 
 all_pitch_types = {}
@@ -318,10 +578,6 @@ for pitch_type in available_pitch_types:
     )
     print("=" * 70)
 
-
-    # --------------------------------------
-    # THIS PITCH TYPE
-    # --------------------------------------
 
     pitch_data = data[
         data["pitch_type"] == pitch_type
@@ -344,7 +600,7 @@ for pitch_type in available_pitch_types:
 
 
     # --------------------------------------
-    # VS RIGHT-HANDED BATTERS
+    # VS RHB
     # --------------------------------------
 
     vs_rhb = pitch_data[
@@ -363,7 +619,7 @@ for pitch_type in available_pitch_types:
 
 
     # --------------------------------------
-    # VS LEFT-HANDED BATTERS
+    # VS LHB
     # --------------------------------------
 
     vs_lhb = pitch_data[
@@ -402,6 +658,25 @@ for pitch_type in available_pitch_types:
 
 
 # ==========================================
+# BUILD INDIVIDUAL PITCHER DATA
+# ==========================================
+
+print()
+print("=" * 70)
+print("BUILDING INDIVIDUAL PITCHER DATA")
+print("=" * 70)
+
+individual_pitchers = (
+    build_individual_pitchers(data)
+)
+
+print(
+    f"Individual pitchers: "
+    f"{len(individual_pitchers)}"
+)
+
+
+# ==========================================
 # CREATE FINAL JSON
 # ==========================================
 
@@ -421,12 +696,16 @@ output = {
 
         "overall_two_strike_pitches_per_162_games":
             OVERALL_PITCHES_PER_162_GAMES,
-    
+
         "split_two_strike_pitches_per_162_games":
             SPLIT_PITCHES_PER_162_GAMES
     },
 
-    "pitch_types": all_pitch_types
+    "pitch_types":
+        all_pitch_types,
+
+    "pitchers":
+        individual_pitchers
 }
 
 
@@ -460,6 +739,11 @@ print("=" * 70)
 print(
     f"Pitch types processed: "
     f"{len(all_pitch_types)}"
+)
+
+print(
+    f"Individual pitchers: "
+    f"{len(individual_pitchers)}"
 )
 
 print(
