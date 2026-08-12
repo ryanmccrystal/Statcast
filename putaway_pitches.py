@@ -2,7 +2,7 @@ from pybaseball import statcast
 import pandas as pd
 import json
 import math
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 
 # ==========================================
@@ -52,18 +52,76 @@ PITCH_TYPE_NAMES = {
 
 
 # ==========================================
-# GET STATCAST DATA
+# GET STATCAST DATA IN SMALLER CHUNKS
 # ==========================================
 
 print("Downloading Statcast data...")
 print(f"Date range: {START_DATE} through {END_DATE}")
 
-data = statcast(
-    start_dt=START_DATE,
-    end_dt=END_DATE
+start_date = datetime.strptime(
+    START_DATE,
+    "%Y-%m-%d"
 )
 
-print(f"Total pitches downloaded: {len(data):,}")
+end_date = datetime.strptime(
+    END_DATE,
+    "%Y-%m-%d"
+)
+
+chunk_size = 7
+
+data_chunks = []
+
+current_start = start_date
+
+while current_start <= end_date:
+
+    current_end = min(
+        current_start + timedelta(
+            days=chunk_size - 1
+        ),
+        end_date
+    )
+
+    chunk_start = current_start.strftime(
+        "%Y-%m-%d"
+    )
+
+    chunk_end = current_end.strftime(
+        "%Y-%m-%d"
+    )
+
+    print(
+        f"Downloading {chunk_start} "
+        f"through {chunk_end}..."
+    )
+
+    chunk = statcast(
+        start_dt=chunk_start,
+        end_dt=chunk_end
+    )
+
+    data_chunks.append(chunk)
+
+    print(
+        f"  Pitches downloaded: "
+        f"{len(chunk):,}"
+    )
+
+    current_start = (
+        current_end + timedelta(days=1)
+    )
+
+
+data = pd.concat(
+    data_chunks,
+    ignore_index=True
+)
+
+print(
+    f"Total pitches downloaded: "
+    f"{len(data):,}"
+)
 
 
 # ==========================================
