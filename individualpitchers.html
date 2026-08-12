@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Individual Pitchers - Putaway Pitches</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: white;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+
+        h2 {
+            margin: 8px 0 20px 0;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+
+        .updated {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        /* ==============================
+           SEARCH
+           ============================== */
+
+        .search-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+
+        #pitcherSearch {
+            width: 100%;
+            box-sizing: border-box;
+
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+
+            padding: 9px 10px;
+
+            border: 1px solid #999999;
+            background: white;
+            color: black;
+        }
+
+
+        #pitcherSearch:focus {
+            outline: none;
+            border-color: black;
+        }
+
+
+        .search-results {
+            position: absolute;
+
+            top: 100%;
+            left: 0;
+            right: 0;
+
+            background: white;
+
+            border: 1px solid #999999;
+            border-top: none;
+
+            z-index: 10;
+
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+
+        .search-result {
+            padding: 8px 10px;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            border-bottom: 1px solid #dddddd;
+        }
+
+
+        .search-result:hover {
+            background: #eeeeee;
+        }
+
+
+        /* ==============================
+           SELECTED PITCHER
+           ============================== */
+
+        #selectedPitcher {
+            font-size: 24px;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ==============================
+           HANDEDNESS FILTERS
+           ============================== */
+
+        .handedness-tabs {
+            display: flex;
+
+            gap: 6px;
+
+            margin-bottom: 25px;
+
+            border-bottom: 2px solid black;
+
+            padding-bottom: 8px;
+        }
+
+
+        .handedness-tab {
+            font-family: "Times New Roman", Times, serif;
+
+            font-size: 16px;
+
+            background: white;
+            color: black;
+
+            border: 1px solid #999999;
+
+            padding: 7px 14px;
+
+            cursor: pointer;
+        }
+
+
+        .handedness-tab:hover {
+            background: #eeeeee;
+        }
+
+
+        .handedness-tab.active {
+            background: black;
+            color: white;
+
+            border-color: black;
+        }
+
+
+        /* ==============================
+           TABLE
+           ============================== */
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            font-size: 18px;
+        }
+
+
+        th {
+            text-align: center;
+
+            border-bottom: 2px solid black;
+
+            padding: 8px 6px;
+        }
+
+
+        td {
+            text-align: center;
+
+            padding: 7px 6px;
+
+            border-bottom: 1px solid #cccccc;
+        }
+
+
+        th:first-child,
+        td:first-child {
+            text-align: left;
+        }
+
+
+        /* ==============================
+           MESSAGE
+           ============================== */
+
+        .message {
+            margin-top: 25px;
+
+            font-size: 18px;
+        }
+
+
+        /* ==============================
+           MOBILE
+           ============================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 25px 10px;
+            }
+
+
+            h1 {
+                font-size: 26px;
+            }
+
+
+            h2 {
+                font-size: 20px;
+            }
+
+
+            #selectedPitcher {
+                font-size: 21px;
+            }
+
+
+            .handedness-tab {
+                font-size: 14px;
+
+                padding: 6px 9px;
+            }
+
+
+            table {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <h1>INDIVIDUAL PITCHERS</h1>
+
+    <h2>Putaway Pitches</h2>
+
+
+    <div class="updated" id="updated"></div>
+
+
+    <!-- ==============================
+         PITCHER SEARCH
+         ============================== -->
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="pitcherSearch"
+            placeholder="Search for a pitcher..."
+            autocomplete="off"
+        >
+
+        <div
+            class="search-results"
+            id="searchResults"
+        ></div>
+
+    </div>
+
+
+    <!-- ==============================
+         SELECTED PITCHER
+         ============================== -->
+
+    <div
+        id="selectedPitcher"
+        style="display: none;"
+    ></div>
+
+
+    <!-- ==============================
+         HANDEDNESS FILTERS
+         ============================== -->
+
+    <div
+        class="handedness-tabs"
+        id="handednessTabs"
+        style="display: none;"
+    >
+
+        <button
+            class="handedness-tab active"
+            data-split="overall"
+        >
+            Overall
+        </button>
+
+
+        <button
+            class="handedness-tab"
+            data-split="vs_rhb"
+        >
+            vs RHB
+        </button>
+
+
+        <button
+            class="handedness-tab"
+            data-split="vs_lhb"
+        >
+            vs LHB
+        </button>
+
+    </div>
+
+
+    <!-- ==============================
+         LEADERBOARD
+         ============================== -->
+
+    <table
+        id="pitchTable"
+        style="display: none;"
+    >
+
+        <thead>
+
+            <tr>
+
+                <th>Pitch</th>
+
+                <th>Usage</th>
+
+                <th>2-Str Pitches</th>
+
+                <th>K</th>
+
+                <th>Putaway Rate</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody
+            id="pitcherLeaderboard"
+        ></tbody>
+
+    </table>
+
+
+    <div
+        class="message"
+        id="message"
+    >
+        Search for a pitcher to get started.
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+// ==========================================
+// VARIABLES
+// ==========================================
+
+let pitcherData = {};
+
+let currentPitcher = null;
+
+let currentSplit = "overall";
+
+
+// ==========================================
+// LOAD JSON
+// ==========================================
+
+async function loadData() {
+
+    try {
+
+        const response =
+            await fetch(
+                "putaway_pitches.json"
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load pitcher data."
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        pitcherData =
+            data.pitchers;
+
+
+        // Updated timestamp
+
+        const updated =
+            new Date(
+                data.last_updated
+            );
+
+
+        document.getElementById(
+            "updated"
+        ).textContent =
+
+            "Updated " +
+
+            updated.toLocaleString(
+                "en-US",
+                {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit"
+                }
+            );
+
+
+        setupSearch();
+
+        setupHandednessTabs();
+
+
+    } catch (error) {
+
+        document.getElementById(
+            "message"
+        ).textContent =
+            "Unable to load pitcher data.";
+
+        console.error(error);
+
+    }
+
+}
+
+
+// ==========================================
+// SEARCH
+// ==========================================
+
+function setupSearch() {
+
+    const searchInput =
+        document.getElementById(
+            "pitcherSearch"
+        );
+
+
+    searchInput.addEventListener(
+        "input",
+        function() {
+
+            const query =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            if (query.length === 0) {
+
+                document.getElementById(
+                    "searchResults"
+                ).innerHTML = "";
+
+                return;
+
+            }
+
+
+            showSearchResults(query);
+
+        }
+    );
+
+
+    // Close results if user clicks
+    // somewhere else on the page.
+
+    document.addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                !event.target.closest(
+                    ".search-container"
+                )
+            ) {
+
+                document.getElementById(
+                    "searchResults"
+                ).innerHTML = "";
+
+            }
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// SHOW SEARCH RESULTS
+// ==========================================
+
+function showSearchResults(query) {
+
+    const results =
+        document.getElementById(
+            "searchResults"
+        );
+
+
+    results.innerHTML = "";
+
+
+    const matches = [];
+
+
+    Object.entries(
+        pitcherData
+    ).forEach(
+        ([pitcherId, pitcher]) => {
+
+            const displayName =
+                formatPitcherName(
+                    pitcher.player_name
+                );
+
+
+            const searchableName =
+                pitcher.player_name
+                    .toLowerCase();
+
+
+            if (
+                searchableName.includes(
+                    query
+                ) ||
+                displayName
+                    .toLowerCase()
+                    .includes(query)
+            ) {
+
+                matches.push({
+                    id: pitcherId,
+                    name: displayName,
+                    pitcher: pitcher
+                });
+
+            }
+
+        }
+    );
+
+
+    // Sort alphabetically
+
+    matches.sort(
+        (a, b) =>
+            a.name.localeCompare(
+                b.name
+            )
+    );
+
+
+    // Limit displayed results
+
+    matches
+        .slice(0, 20)
+        .forEach(
+            match => {
+
+                const result =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                result.className =
+                    "search-result";
+
+
+                result.textContent =
+                    match.name;
+
+
+                result.addEventListener(
+                    "click",
+                    function() {
+
+                        selectPitcher(
+                            match.id
+                        );
+
+                    }
+                );
+
+
+                results.appendChild(
+                    result
+                );
+
+            }
+        );
+
+
+    if (matches.length === 0) {
+
+        const result =
+            document.createElement(
+                "div"
+            );
+
+
+        result.className =
+            "search-result";
+
+
+        result.textContent =
+            "No pitchers found.";
+
+
+        results.appendChild(
+            result
+        );
+
+    }
+
+}
+
+
+// ==========================================
+// FORMAT PITCHER NAME
+// ==========================================
+
+function formatPitcherName(
+    playerName
+) {
+
+    const parts =
+        playerName.split(", ");
+
+
+    if (parts.length === 2) {
+
+        return (
+            parts[1] +
+            " " +
+            parts[0]
+        );
+
+    }
+
+
+    return playerName;
+
+}
+
+
+// ==========================================
+// SELECT PITCHER
+// ==========================================
+
+function selectPitcher(
+    pitcherId
+) {
+
+    currentPitcher =
+        pitcherData[pitcherId];
+
+
+    currentSplit =
+        "overall";
+
+
+    // Update search box
+
+    document.getElementById(
+        "pitcherSearch"
+    ).value =
+        formatPitcherName(
+            currentPitcher.player_name
+        );
+
+
+    // Close search results
+
+    document.getElementById(
+        "searchResults"
+    ).innerHTML = "";
+
+
+    // Show pitcher name
+
+    const selectedPitcher =
+        document.getElementById(
+            "selectedPitcher"
+        );
+
+
+    selectedPitcher.textContent =
+        formatPitcherName(
+            currentPitcher.player_name
+        ) +
+        ", " +
+        currentPitcher.teams.join("/");
+
+
+    selectedPitcher.style.display =
+        "block";
+
+
+    // Show filters
+
+    document.getElementById(
+        "handednessTabs"
+    ).style.display =
+        "flex";
+
+
+    // Show table
+
+    document.getElementById(
+        "pitchTable"
+    ).style.display =
+        "table";
+
+
+    // Hide initial message
+
+    document.getElementById(
+        "message"
+    ).style.display =
+        "none";
+
+
+    // Reset active filter
+
+    document
+        .querySelectorAll(
+            ".handedness-tab"
+        )
+        .forEach(
+            button => {
+
+                button.classList.toggle(
+                    "active",
+                    button.dataset.split ===
+                        "overall"
+                );
+
+            }
+        );
+
+
+    displayPitcher();
+
+}
+
+
+// ==========================================
+// HANDEDNESS FILTERS
+// ==========================================
+
+function setupHandednessTabs() {
+
+    document
+        .querySelectorAll(
+            ".handedness-tab"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function() {
+
+                        if (!currentPitcher) {
+                            return;
+                        }
+
+
+                        currentSplit =
+                            button.dataset.split;
+
+
+                        document
+                            .querySelectorAll(
+                                ".handedness-tab"
+                            )
+                            .forEach(
+                                otherButton => {
+
+                                    otherButton
+                                        .classList
+                                        .toggle(
+                                            "active",
+                                            otherButton ===
+                                                button
+                                        );
+
+                                }
+                            );
+
+
+                        displayPitcher();
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+// ==========================================
+// DISPLAY PITCHER
+// ==========================================
+
+function displayPitcher() {
+
+    if (!currentPitcher) {
+        return;
+    }
+
+
+    const pitches =
+        currentPitcher[
+            currentSplit
+        ] || [];
+
+
+    const tableBody =
+        document.getElementById(
+            "pitcherLeaderboard"
+        );
+
+
+    tableBody.innerHTML = "";
+
+
+    // If no pitches exist for this split
+
+    if (pitches.length === 0) {
+
+        const row =
+            document.createElement(
+                "tr"
+            );
+
+
+        const cell =
+            document.createElement(
+                "td"
+            );
+
+
+        cell.colSpan = 5;
+
+        cell.textContent =
+            "No two-strike pitches available.";
+
+        row.appendChild(cell);
+
+        tableBody.appendChild(row);
+
+        return;
+
+    }
+
+
+    // Build table
+
+    pitches.forEach(
+        pitch => {
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            const pitchCell =
+                document.createElement(
+                    "td"
+                );
+
+
+            const usageCell =
+                document.createElement(
+                    "td"
+                );
+
+
+            const pitchesCell =
+                document.createElement(
+                    "td"
+                );
+
+
+            const strikeoutsCell =
+                document.createElement(
+                    "td"
+                );
+
+
+            const rateCell =
+                document.createElement(
+                    "td"
+                );
+
+
+            pitchCell.textContent =
+                pitch.pitch_name;
+
+
+            usageCell.textContent =
+                (
+                    pitch.usage *
+                    100
+                ).toFixed(1) +
+                "%";
+
+
+            pitchesCell.textContent =
+                pitch.two_strike_pitches;
+
+
+            strikeoutsCell.textContent =
+                pitch.strikeouts;
+
+
+            rateCell.textContent =
+                (
+                    pitch.putaway_rate *
+                    100
+                ).toFixed(1) +
+                "%";
+
+
+            row.appendChild(
+                pitchCell
+            );
+
+
+            row.appendChild(
+                usageCell
+            );
+
+
+            row.appendChild(
+                pitchesCell
+            );
+
+
+            row.appendChild(
+                strikeoutsCell
+            );
+
+
+            row.appendChild(
+                rateCell
+            );
+
+
+            tableBody.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// START
+// ==========================================
+
+loadData();
+
+</script>
+
+</body>
+</html>
