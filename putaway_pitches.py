@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 # ==========================================
 
 START_DATE = "2026-03-01"
-END_DATE = "2026-08-07"
+END_DATE = "2026-08-11"
 
 # League leaderboard qualification:
 # 50 two-strike pitches per 162 team games
