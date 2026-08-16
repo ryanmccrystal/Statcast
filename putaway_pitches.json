@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-15T10:18:31Z",
+  "last_updated": "2026-08-16T10:18:55Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -30408,9 +30408,9 @@
             "AZ"
           ],
           "team_games": 121,
-          "two_strike_pitches": 74,
+          "two_strike_pitches": 75,
           "strikeouts": 12,
-          "putaway_rate": 0.1622
+          "putaway_rate": 0.16
         },
         {
           "player_id": 695418,
@@ -107850,10 +107850,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.2139,
-          "two_strike_pitches": 74,
+          "usage": 0.2168,
+          "two_strike_pitches": 75,
           "strikeouts": 12,
-          "putaway_rate": 0.1622
+          "putaway_rate": 0.16
         },
         {
           "pitch_type": "CH",
@@ -107882,10 +107882,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0549,
-          "two_strike_pitches": 19,
+          "usage": 0.052,
+          "two_strike_pitches": 18,
           "strikeouts": 3,
-          "putaway_rate": 0.1579
+          "putaway_rate": 0.1667
         }
       ],
       "vs_rhb": [
@@ -107966,10 +107966,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0745,
-          "two_strike_pitches": 14,
+          "usage": 0.0691,
+          "two_strike_pitches": 13,
           "strikeouts": 1,
-          "putaway_rate": 0.0714
+          "putaway_rate": 0.0769
         },
         {
           "pitch_type": "SI",
@@ -107982,10 +107982,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0479,
-          "two_strike_pitches": 9,
+          "usage": 0.0532,
+          "two_strike_pitches": 10,
           "strikeouts": 2,
-          "putaway_rate": 0.2222
+          "putaway_rate": 0.2
         }
       ]
     },
@@ -118427,10 +118427,10 @@
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.1949,
-          "two_strike_pitches": 23,
+          "usage": 0.1525,
+          "two_strike_pitches": 18,
           "strikeouts": 1,
-          "putaway_rate": 0.0435
+          "putaway_rate": 0.0556
         },
         {
           "pitch_type": "ST",
@@ -118439,6 +118439,14 @@
           "two_strike_pitches": 15,
           "strikeouts": 3,
           "putaway_rate": 0.2
+        },
+        {
+          "pitch_type": "SI",
+          "pitch_name": "Sinker",
+          "usage": 0.0424,
+          "two_strike_pitches": 5,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ],
       "vs_rhb": [
@@ -118451,14 +118459,6 @@
           "putaway_rate": 0.0714
         },
         {
-          "pitch_type": "CH",
-          "pitch_name": "Changeup",
-          "usage": 0.2895,
-          "two_strike_pitches": 22,
-          "strikeouts": 1,
-          "putaway_rate": 0.0455
-        },
-        {
           "pitch_type": "SL",
           "pitch_name": "Slider",
           "usage": 0.2763,
@@ -118467,12 +118467,28 @@
           "putaway_rate": 0.0952
         },
         {
+          "pitch_type": "CH",
+          "pitch_name": "Changeup",
+          "usage": 0.2368,
+          "two_strike_pitches": 18,
+          "strikeouts": 1,
+          "putaway_rate": 0.0556
+        },
+        {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
           "usage": 0.0658,
           "two_strike_pitches": 5,
           "strikeouts": 2,
           "putaway_rate": 0.4
+        },
+        {
+          "pitch_type": "SI",
+          "pitch_name": "Sinker",
+          "usage": 0.0526,
+          "two_strike_pitches": 4,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ],
       "vs_lhb": [
@@ -118501,8 +118517,8 @@
           "putaway_rate": 0.1
         },
         {
-          "pitch_type": "CH",
-          "pitch_name": "Changeup",
+          "pitch_type": "SI",
+          "pitch_name": "Sinker",
           "usage": 0.0238,
           "two_strike_pitches": 1,
           "strikeouts": 0,
