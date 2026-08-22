@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-21T10:25:07Z",
+  "last_updated": "2026-08-22T10:18:34Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -12256,9 +12256,9 @@
             "AZ"
           ],
           "team_games": 121,
-          "two_strike_pitches": 44,
+          "two_strike_pitches": 43,
           "strikeouts": 3,
-          "putaway_rate": 0.0682
+          "putaway_rate": 0.0698
         },
         {
           "player_id": 621111,
@@ -18234,9 +18234,9 @@
             "AZ"
           ],
           "team_games": 121,
-          "two_strike_pitches": 31,
+          "two_strike_pitches": 30,
           "strikeouts": 1,
-          "putaway_rate": 0.0323
+          "putaway_rate": 0.0333
         },
         {
           "player_id": 663568,
@@ -52454,20 +52454,20 @@
           "putaway_rate": 0.2209
         },
         {
-          "pitch_type": "FF",
-          "pitch_name": "Four-Seam Fastball",
-          "usage": 0.1973,
-          "two_strike_pitches": 44,
-          "strikeouts": 3,
-          "putaway_rate": 0.0682
-        },
-        {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
           "usage": 0.1973,
           "two_strike_pitches": 44,
           "strikeouts": 8,
           "putaway_rate": 0.1818
+        },
+        {
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
+          "usage": 0.1928,
+          "two_strike_pitches": 43,
+          "strikeouts": 3,
+          "putaway_rate": 0.0698
         },
         {
           "pitch_type": "CU",
@@ -52480,10 +52480,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0359,
-          "two_strike_pitches": 8,
+          "usage": 0.0404,
+          "two_strike_pitches": 9,
           "strikeouts": 1,
-          "putaway_rate": 0.125
+          "putaway_rate": 0.1111
         }
       ],
       "vs_rhb": [
@@ -52532,18 +52532,18 @@
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.2605,
-          "two_strike_pitches": 31,
+          "usage": 0.2521,
+          "two_strike_pitches": 30,
           "strikeouts": 1,
-          "putaway_rate": 0.0323
+          "putaway_rate": 0.0333
         },
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0672,
-          "two_strike_pitches": 8,
+          "usage": 0.0756,
+          "two_strike_pitches": 9,
           "strikeouts": 1,
-          "putaway_rate": 0.125
+          "putaway_rate": 0.1111
         },
         {
           "pitch_type": "SI",
