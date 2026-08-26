@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25T10:27:02Z",
+  "last_updated": "2026-08-26T10:32:19Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -7341,6 +7341,17 @@
           "putaway_rate": 0.1316
         },
         {
+          "player_id": 615698,
+          "player_name": "Quantrill, Cal",
+          "teams": [
+            "TEX"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 56,
+          "strikeouts": 7,
+          "putaway_rate": 0.125
+        },
+        {
           "player_id": 676534,
           "player_name": "Faucher, Calvin",
           "teams": [
@@ -7372,17 +7383,6 @@
           "two_strike_pitches": 51,
           "strikeouts": 6,
           "putaway_rate": 0.1176
-        },
-        {
-          "player_id": 615698,
-          "player_name": "Quantrill, Cal",
-          "teams": [
-            "TEX"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 60,
-          "strikeouts": 7,
-          "putaway_rate": 0.1167
         },
         {
           "player_id": 607259,
@@ -25174,9 +25174,9 @@
             "PIT"
           ],
           "team_games": 121,
-          "two_strike_pitches": 149,
+          "two_strike_pitches": 150,
           "strikeouts": 31,
-          "putaway_rate": 0.2081
+          "putaway_rate": 0.2067
         },
         {
           "player_id": 663776,
@@ -25509,17 +25509,6 @@
           "putaway_rate": 0.1829
         },
         {
-          "player_id": 669372,
-          "player_name": "Ginn, J.T.",
-          "teams": [
-            "ATH"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 110,
-          "strikeouts": 20,
-          "putaway_rate": 0.1818
-        },
-        {
           "player_id": 607625,
           "player_name": "Lugo, Seth",
           "teams": [
@@ -25595,6 +25584,17 @@
           "two_strike_pitches": 63,
           "strikeouts": 11,
           "putaway_rate": 0.1746
+        },
+        {
+          "player_id": 669372,
+          "player_name": "Ginn, J.T.",
+          "teams": [
+            "ATH"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 109,
+          "strikeouts": 19,
+          "putaway_rate": 0.1743
         },
         {
           "player_id": 683232,
@@ -27266,17 +27266,6 @@
           "putaway_rate": 0.1818
         },
         {
-          "player_id": 669372,
-          "player_name": "Ginn, J.T.",
-          "teams": [
-            "ATH"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 72,
-          "strikeouts": 13,
-          "putaway_rate": 0.1806
-        },
-        {
           "player_id": 668678,
           "player_name": "Gallen, Zac",
           "teams": [
@@ -27343,6 +27332,17 @@
           "putaway_rate": 0.1714
         },
         {
+          "player_id": 696149,
+          "player_name": "Chandler, Bubba",
+          "teams": [
+            "PIT"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 76,
+          "strikeouts": 13,
+          "putaway_rate": 0.1711
+        },
+        {
           "player_id": 683769,
           "player_name": "Gaddis, Hunter",
           "teams": [
@@ -27354,6 +27354,17 @@
           "putaway_rate": 0.1702
         },
         {
+          "player_id": 669372,
+          "player_name": "Ginn, J.T.",
+          "teams": [
+            "ATH"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 71,
+          "strikeouts": 12,
+          "putaway_rate": 0.169
+        },
+        {
           "player_id": 679883,
           "player_name": "Avila, Luinder",
           "teams": [
@@ -27363,17 +27374,6 @@
           "two_strike_pitches": 71,
           "strikeouts": 12,
           "putaway_rate": 0.169
-        },
-        {
-          "player_id": 696149,
-          "player_name": "Chandler, Bubba",
-          "teams": [
-            "PIT"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 77,
-          "strikeouts": 13,
-          "putaway_rate": 0.1688
         },
         {
           "player_id": 693686,
@@ -28205,14 +28205,14 @@
           "putaway_rate": 0.25
         },
         {
-          "player_id": 696149,
-          "player_name": "Chandler, Bubba",
+          "player_id": 681402,
+          "player_name": "Varland, Gus",
           "teams": [
-            "PIT"
+            "WSH"
           ],
           "team_games": 121,
-          "two_strike_pitches": 72,
-          "strikeouts": 18,
+          "two_strike_pitches": 32,
+          "strikeouts": 8,
           "putaway_rate": 0.25
         },
         {
@@ -28246,17 +28246,6 @@
           "team_games": 120,
           "two_strike_pitches": 48,
           "strikeouts": 12,
-          "putaway_rate": 0.25
-        },
-        {
-          "player_id": 681402,
-          "player_name": "Varland, Gus",
-          "teams": [
-            "WSH"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 32,
-          "strikeouts": 8,
           "putaway_rate": 0.25
         },
         {
@@ -28301,6 +28290,17 @@
           "team_games": 121,
           "two_strike_pitches": 37,
           "strikeouts": 9,
+          "putaway_rate": 0.2432
+        },
+        {
+          "player_id": 696149,
+          "player_name": "Chandler, Bubba",
+          "teams": [
+            "PIT"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 74,
+          "strikeouts": 18,
           "putaway_rate": 0.2432
         },
         {
@@ -29970,17 +29970,6 @@
           "putaway_rate": 0.1954
         },
         {
-          "player_id": 650633,
-          "player_name": "King, Michael",
-          "teams": [
-            "SD"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 113,
-          "strikeouts": 22,
-          "putaway_rate": 0.1947
-        },
-        {
           "player_id": 676106,
           "player_name": "Hancock, Emerson",
           "teams": [
@@ -30001,6 +29990,17 @@
           "two_strike_pitches": 98,
           "strikeouts": 19,
           "putaway_rate": 0.1939
+        },
+        {
+          "player_id": 650633,
+          "player_name": "King, Michael",
+          "teams": [
+            "SD"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 114,
+          "strikeouts": 22,
+          "putaway_rate": 0.193
         },
         {
           "player_id": 663992,
@@ -30397,9 +30397,9 @@
             "AZ"
           ],
           "team_games": 121,
-          "two_strike_pitches": 75,
+          "two_strike_pitches": 76,
           "strikeouts": 12,
-          "putaway_rate": 0.16
+          "putaway_rate": 0.1579
         },
         {
           "player_id": 695418,
@@ -31237,9 +31237,9 @@
             "SD"
           ],
           "team_games": 121,
-          "two_strike_pitches": 79,
+          "two_strike_pitches": 80,
           "strikeouts": 17,
-          "putaway_rate": 0.2152
+          "putaway_rate": 0.2125
         },
         {
           "player_id": 681799,
@@ -34150,8 +34150,8 @@
           "putaway_rate": 0.3333
         },
         {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
           "usage": 0.0131,
           "two_strike_pitches": 3,
           "strikeouts": 0,
@@ -34184,8 +34184,8 @@
           "putaway_rate": 0.5
         },
         {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
           "usage": 0.0194,
           "two_strike_pitches": 2,
           "strikeouts": 0,
@@ -34218,8 +34218,8 @@
           "putaway_rate": 0.0
         },
         {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
           "usage": 0.0079,
           "two_strike_pitches": 1,
           "strikeouts": 0,
@@ -45067,10 +45067,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.1954,
-          "two_strike_pitches": 60,
+          "usage": 0.1824,
+          "two_strike_pitches": 56,
           "strikeouts": 7,
-          "putaway_rate": 0.1167
+          "putaway_rate": 0.125
         },
         {
           "pitch_type": "CU",
@@ -45079,6 +45079,14 @@
           "two_strike_pitches": 9,
           "strikeouts": 1,
           "putaway_rate": 0.1111
+        },
+        {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.013,
+          "two_strike_pitches": 4,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ],
       "vs_rhb": [
@@ -45099,14 +45107,6 @@
           "putaway_rate": 0.0714
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
-          "usage": 0.2091,
-          "two_strike_pitches": 23,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
           "pitch_type": "FS",
           "pitch_name": "Splitter",
           "usage": 0.1909,
@@ -45115,8 +45115,24 @@
           "putaway_rate": 0.2381
         },
         {
+          "pitch_type": "FC",
+          "pitch_name": "Cutter",
+          "usage": 0.1727,
+          "two_strike_pitches": 19,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
+        },
+        {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
+          "usage": 0.0364,
+          "two_strike_pitches": 4,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
+        },
+        {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
           "usage": 0.0364,
           "two_strike_pitches": 4,
           "strikeouts": 0,
@@ -54120,28 +54136,28 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.1725,
-          "two_strike_pitches": 113,
+          "usage": 0.174,
+          "two_strike_pitches": 114,
           "strikeouts": 22,
-          "putaway_rate": 0.1947
+          "putaway_rate": 0.193
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0565,
-          "two_strike_pitches": 37,
+          "usage": 0.055,
+          "two_strike_pitches": 36,
           "strikeouts": 5,
-          "putaway_rate": 0.1351
+          "putaway_rate": 0.1389
         }
       ],
       "vs_rhb": [
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.2915,
-          "two_strike_pitches": 79,
+          "usage": 0.2952,
+          "two_strike_pitches": 80,
           "strikeouts": 17,
-          "putaway_rate": 0.2152
+          "putaway_rate": 0.2125
         },
         {
           "pitch_type": "FF",
@@ -54170,10 +54186,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0369,
-          "two_strike_pitches": 10,
+          "usage": 0.0332,
+          "two_strike_pitches": 9,
           "strikeouts": 1,
-          "putaway_rate": 0.1
+          "putaway_rate": 0.1111
         }
       ],
       "vs_lhb": [
@@ -62312,18 +62328,18 @@
         {
           "pitch_type": "SV",
           "pitch_name": "Slurve",
-          "usage": 0.25,
-          "two_strike_pitches": 34,
+          "usage": 0.2647,
+          "two_strike_pitches": 36,
           "strikeouts": 7,
-          "putaway_rate": 0.2059
+          "putaway_rate": 0.1944
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0368,
-          "two_strike_pitches": 5,
+          "usage": 0.0221,
+          "two_strike_pitches": 3,
           "strikeouts": 1,
-          "putaway_rate": 0.2
+          "putaway_rate": 0.3333
         }
       ],
       "vs_rhb": [
@@ -62356,18 +62372,18 @@
         {
           "pitch_type": "SV",
           "pitch_name": "Slurve",
-          "usage": 0.1781,
-          "two_strike_pitches": 13,
+          "usage": 0.2055,
+          "two_strike_pitches": 15,
           "strikeouts": 1,
-          "putaway_rate": 0.0769
+          "putaway_rate": 0.0667
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0685,
-          "two_strike_pitches": 5,
+          "usage": 0.0411,
+          "two_strike_pitches": 3,
           "strikeouts": 1,
-          "putaway_rate": 0.2
+          "putaway_rate": 0.3333
         }
       ]
     },
@@ -73621,10 +73637,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2254,
-          "two_strike_pitches": 110,
-          "strikeouts": 20,
-          "putaway_rate": 0.1818
+          "usage": 0.2234,
+          "two_strike_pitches": 109,
+          "strikeouts": 19,
+          "putaway_rate": 0.1743
         },
         {
           "pitch_type": "FF",
@@ -73641,6 +73657,14 @@
           "two_strike_pitches": 30,
           "strikeouts": 4,
           "putaway_rate": 0.1333
+        },
+        {
+          "pitch_type": "CU",
+          "pitch_name": "Curveball",
+          "usage": 0.002,
+          "two_strike_pitches": 1,
+          "strikeouts": 1,
+          "putaway_rate": 1.0
         }
       ],
       "vs_rhb": [
@@ -73655,10 +73679,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.3582,
-          "two_strike_pitches": 72,
-          "strikeouts": 13,
-          "putaway_rate": 0.1806
+          "usage": 0.3532,
+          "two_strike_pitches": 71,
+          "strikeouts": 12,
+          "putaway_rate": 0.169
         },
         {
           "pitch_type": "FF",
@@ -73683,6 +73707,14 @@
           "two_strike_pitches": 8,
           "strikeouts": 1,
           "putaway_rate": 0.125
+        },
+        {
+          "pitch_type": "CU",
+          "pitch_name": "Curveball",
+          "usage": 0.005,
+          "two_strike_pitches": 1,
+          "strikeouts": 1,
+          "putaway_rate": 1.0
         }
       ],
       "vs_lhb": [
@@ -88747,18 +88779,18 @@
         {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
-          "usage": 0.2925,
-          "two_strike_pitches": 31,
+          "usage": 0.283,
+          "two_strike_pitches": 30,
           "strikeouts": 5,
-          "putaway_rate": 0.1613
+          "putaway_rate": 0.1667
         },
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.1509,
-          "two_strike_pitches": 16,
+          "usage": 0.1604,
+          "two_strike_pitches": 17,
           "strikeouts": 1,
-          "putaway_rate": 0.0625
+          "putaway_rate": 0.0588
         },
         {
           "pitch_type": "CH",
@@ -88789,16 +88821,16 @@
         {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
-          "usage": 0.3038,
-          "two_strike_pitches": 24,
+          "usage": 0.2911,
+          "two_strike_pitches": 23,
           "strikeouts": 5,
-          "putaway_rate": 0.2083
+          "putaway_rate": 0.2174
         },
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.1519,
-          "two_strike_pitches": 12,
+          "usage": 0.1646,
+          "two_strike_pitches": 13,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
@@ -107839,10 +107871,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.2168,
-          "two_strike_pitches": 75,
+          "usage": 0.2197,
+          "two_strike_pitches": 76,
           "strikeouts": 12,
-          "putaway_rate": 0.16
+          "putaway_rate": 0.1579
         },
         {
           "pitch_type": "CH",
@@ -107871,10 +107903,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.052,
-          "two_strike_pitches": 18,
+          "usage": 0.0491,
+          "two_strike_pitches": 17,
           "strikeouts": 3,
-          "putaway_rate": 0.1667
+          "putaway_rate": 0.1765
         }
       ],
       "vs_rhb": [
@@ -107953,14 +107985,6 @@
           "putaway_rate": 0.2
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
-          "usage": 0.0691,
-          "two_strike_pitches": 13,
-          "strikeouts": 1,
-          "putaway_rate": 0.0769
-        },
-        {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
           "usage": 0.0691,
@@ -107969,12 +107993,20 @@
           "putaway_rate": 0.0769
         },
         {
+          "pitch_type": "FC",
+          "pitch_name": "Cutter",
+          "usage": 0.0638,
+          "two_strike_pitches": 12,
+          "strikeouts": 1,
+          "putaway_rate": 0.0833
+        },
+        {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0532,
-          "two_strike_pitches": 10,
+          "usage": 0.0585,
+          "two_strike_pitches": 11,
           "strikeouts": 2,
-          "putaway_rate": 0.2
+          "putaway_rate": 0.1818
         }
       ]
     },
@@ -109920,10 +109952,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1318,
-          "two_strike_pitches": 17,
-          "strikeouts": 2,
-          "putaway_rate": 0.1176
+          "usage": 0.124,
+          "two_strike_pitches": 16,
+          "strikeouts": 1,
+          "putaway_rate": 0.0625
         },
         {
           "pitch_type": "CH",
@@ -109944,10 +109976,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.0233,
-          "two_strike_pitches": 3,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
+          "usage": 0.031,
+          "two_strike_pitches": 4,
+          "strikeouts": 1,
+          "putaway_rate": 0.25
         }
       ],
       "vs_rhb": [
@@ -110020,10 +110052,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1719,
-          "two_strike_pitches": 11,
-          "strikeouts": 1,
-          "putaway_rate": 0.0909
+          "usage": 0.1562,
+          "two_strike_pitches": 10,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         },
         {
           "pitch_type": "CH",
@@ -110034,18 +110066,18 @@
           "putaway_rate": 0.0
         },
         {
+          "pitch_type": "CU",
+          "pitch_name": "Curveball",
+          "usage": 0.0469,
+          "two_strike_pitches": 3,
+          "strikeouts": 1,
+          "putaway_rate": 0.3333
+        },
+        {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
           "usage": 0.0469,
           "two_strike_pitches": 3,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
-          "pitch_type": "CU",
-          "pitch_name": "Curveball",
-          "usage": 0.0312,
-          "two_strike_pitches": 2,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
@@ -112537,10 +112569,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2376,
-          "two_strike_pitches": 149,
+          "usage": 0.2392,
+          "two_strike_pitches": 150,
           "strikeouts": 31,
-          "putaway_rate": 0.2081
+          "putaway_rate": 0.2067
         },
         {
           "pitch_type": "CH",
@@ -112561,10 +112593,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.0319,
-          "two_strike_pitches": 20,
+          "usage": 0.0303,
+          "two_strike_pitches": 19,
           "strikeouts": 1,
-          "putaway_rate": 0.05
+          "putaway_rate": 0.0526
         },
         {
           "pitch_type": "SI",
@@ -112587,10 +112619,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2628,
-          "two_strike_pitches": 77,
+          "usage": 0.2594,
+          "two_strike_pitches": 76,
           "strikeouts": 13,
-          "putaway_rate": 0.1688
+          "putaway_rate": 0.1711
         },
         {
           "pitch_type": "CH",
@@ -112603,10 +112635,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0956,
-          "two_strike_pitches": 28,
+          "usage": 0.099,
+          "two_strike_pitches": 29,
           "strikeouts": 5,
-          "putaway_rate": 0.1786
+          "putaway_rate": 0.1724
         },
         {
           "pitch_type": "SI",
@@ -112637,10 +112669,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2156,
-          "two_strike_pitches": 72,
+          "usage": 0.2216,
+          "two_strike_pitches": 74,
           "strikeouts": 18,
-          "putaway_rate": 0.25
+          "putaway_rate": 0.2432
         },
         {
           "pitch_type": "CH",
@@ -112653,16 +112685,16 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.0359,
-          "two_strike_pitches": 12,
+          "usage": 0.0329,
+          "two_strike_pitches": 11,
           "strikeouts": 1,
-          "putaway_rate": 0.0833
+          "putaway_rate": 0.0909
         },
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0269,
-          "two_strike_pitches": 9,
+          "usage": 0.024,
+          "two_strike_pitches": 8,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
