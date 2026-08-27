@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26T10:32:19Z",
+  "last_updated": "2026-08-27T20:07:10Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -4900,18 +4900,6 @@
           "putaway_rate": 0.1951
         },
         {
-          "player_id": 642547,
-          "player_name": "Peralta, Freddy",
-          "teams": [
-            "NYM",
-            "TB"
-          ],
-          "team_games": 240,
-          "two_strike_pitches": 118,
-          "strikeouts": 23,
-          "putaway_rate": 0.1949
-        },
-        {
           "player_id": 668909,
           "player_name": "Williams, Gavin",
           "teams": [
@@ -4921,6 +4909,18 @@
           "two_strike_pitches": 180,
           "strikeouts": 35,
           "putaway_rate": 0.1944
+        },
+        {
+          "player_id": 642547,
+          "player_name": "Peralta, Freddy",
+          "teams": [
+            "NYM",
+            "TB"
+          ],
+          "team_games": 240,
+          "two_strike_pitches": 120,
+          "strikeouts": 23,
+          "putaway_rate": 0.1917
         },
         {
           "player_id": 688883,
@@ -6337,18 +6337,6 @@
           "putaway_rate": 0.2143
         },
         {
-          "player_id": 642547,
-          "player_name": "Peralta, Freddy",
-          "teams": [
-            "NYM",
-            "TB"
-          ],
-          "team_games": 240,
-          "two_strike_pitches": 90,
-          "strikeouts": 19,
-          "putaway_rate": 0.2111
-        },
-        {
           "player_id": 641755,
           "player_name": "Kinley, Tyler",
           "teams": [
@@ -6380,6 +6368,18 @@
           "two_strike_pitches": 53,
           "strikeouts": 11,
           "putaway_rate": 0.2075
+        },
+        {
+          "player_id": 642547,
+          "player_name": "Peralta, Freddy",
+          "teams": [
+            "NYM",
+            "TB"
+          ],
+          "team_games": 240,
+          "two_strike_pitches": 92,
+          "strikeouts": 19,
+          "putaway_rate": 0.2065
         },
         {
           "player_id": 668909,
@@ -8422,17 +8422,6 @@
           "putaway_rate": 0.2762
         },
         {
-          "player_id": 805427,
-          "player_name": "Sommers, Drew",
-          "teams": [
-            "DET"
-          ],
-          "team_games": 119,
-          "two_strike_pitches": 51,
-          "strikeouts": 14,
-          "putaway_rate": 0.2745
-        },
-        {
           "player_id": 543037,
           "player_name": "Cole, Gerrit",
           "teams": [
@@ -8486,6 +8475,17 @@
           "two_strike_pitches": 267,
           "strikeouts": 72,
           "putaway_rate": 0.2697
+        },
+        {
+          "player_id": 805427,
+          "player_name": "Sommers, Drew",
+          "teams": [
+            "DET"
+          ],
+          "team_games": 119,
+          "two_strike_pitches": 52,
+          "strikeouts": 14,
+          "putaway_rate": 0.2692
         },
         {
           "player_id": 660271,
@@ -25025,17 +25025,6 @@
           "putaway_rate": 0.2206
         },
         {
-          "player_id": 693433,
-          "player_name": "Woo, Bryan",
-          "teams": [
-            "SEA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 105,
-          "strikeouts": 23,
-          "putaway_rate": 0.219
-        },
-        {
           "player_id": 595345,
           "player_name": "Okert, Steven",
           "teams": [
@@ -25044,6 +25033,17 @@
           "team_games": 121,
           "two_strike_pitches": 212,
           "strikeouts": 46,
+          "putaway_rate": 0.217
+        },
+        {
+          "player_id": 693433,
+          "player_name": "Woo, Bryan",
+          "teams": [
+            "SEA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 106,
+          "strikeouts": 23,
           "putaway_rate": 0.217
         },
         {
@@ -28392,17 +28392,6 @@
           "putaway_rate": 0.2321
         },
         {
-          "player_id": 693433,
-          "player_name": "Woo, Bryan",
-          "teams": [
-            "SEA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 91,
-          "strikeouts": 21,
-          "putaway_rate": 0.2308
-        },
-        {
           "player_id": 571578,
           "player_name": "Corbin, Patrick",
           "teams": [
@@ -28423,6 +28412,17 @@
           "two_strike_pitches": 61,
           "strikeouts": 14,
           "putaway_rate": 0.2295
+        },
+        {
+          "player_id": 693433,
+          "player_name": "Woo, Bryan",
+          "teams": [
+            "SEA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 92,
+          "strikeouts": 21,
+          "putaway_rate": 0.2283
         },
         {
           "player_id": 680755,
@@ -29527,6 +29527,17 @@
           "putaway_rate": 0.2414
         },
         {
+          "player_id": 693433,
+          "player_name": "Woo, Bryan",
+          "teams": [
+            "SEA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 104,
+          "strikeouts": 25,
+          "putaway_rate": 0.2404
+        },
+        {
           "player_id": 681035,
           "player_name": "Scott, Christian",
           "teams": [
@@ -29569,17 +29580,6 @@
           "team_games": 121,
           "two_strike_pitches": 147,
           "strikeouts": 35,
-          "putaway_rate": 0.2381
-        },
-        {
-          "player_id": 693433,
-          "player_name": "Woo, Bryan",
-          "teams": [
-            "SEA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 105,
-          "strikeouts": 25,
           "putaway_rate": 0.2381
         },
         {
@@ -32458,6 +32458,17 @@
           "putaway_rate": 0.2281
         },
         {
+          "player_id": 693433,
+          "player_name": "Woo, Bryan",
+          "teams": [
+            "SEA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 31,
+          "strikeouts": 7,
+          "putaway_rate": 0.2258
+        },
+        {
           "player_id": 669923,
           "player_name": "Kirby, George",
           "teams": [
@@ -32467,17 +32478,6 @@
           "two_strike_pitches": 107,
           "strikeouts": 24,
           "putaway_rate": 0.2243
-        },
-        {
-          "player_id": 693433,
-          "player_name": "Woo, Bryan",
-          "teams": [
-            "SEA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 32,
-          "strikeouts": 7,
-          "putaway_rate": 0.2188
         },
         {
           "player_id": 670990,
@@ -52710,10 +52710,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.1691,
-          "two_strike_pitches": 118,
+          "usage": 0.1719,
+          "two_strike_pitches": 120,
           "strikeouts": 23,
-          "putaway_rate": 0.1949
+          "putaway_rate": 0.1917
         },
         {
           "pitch_type": "ST",
@@ -52734,10 +52734,10 @@
         {
           "pitch_type": "CS",
           "pitch_name": "Slow Curve",
-          "usage": 0.0344,
-          "two_strike_pitches": 24,
+          "usage": 0.0315,
+          "two_strike_pitches": 22,
           "strikeouts": 6,
-          "putaway_rate": 0.25
+          "putaway_rate": 0.2727
         }
       ],
       "vs_rhb": [
@@ -52810,18 +52810,18 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.2103,
-          "two_strike_pitches": 90,
+          "usage": 0.215,
+          "two_strike_pitches": 92,
           "strikeouts": 19,
-          "putaway_rate": 0.2111
+          "putaway_rate": 0.2065
         },
         {
           "pitch_type": "CS",
           "pitch_name": "Slow Curve",
-          "usage": 0.0397,
-          "two_strike_pitches": 17,
+          "usage": 0.035,
+          "two_strike_pitches": 15,
           "strikeouts": 4,
-          "putaway_rate": 0.2353
+          "putaway_rate": 0.2667
         },
         {
           "pitch_type": "SL",
@@ -107003,18 +107003,18 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1531,
-          "two_strike_pitches": 105,
+          "usage": 0.1545,
+          "two_strike_pitches": 106,
           "strikeouts": 23,
-          "putaway_rate": 0.219
+          "putaway_rate": 0.217
         },
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.1531,
-          "two_strike_pitches": 105,
+          "usage": 0.1516,
+          "two_strike_pitches": 104,
           "strikeouts": 25,
-          "putaway_rate": 0.2381
+          "putaway_rate": 0.2404
         },
         {
           "pitch_type": "SI",
@@ -107103,10 +107103,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2136,
-          "two_strike_pitches": 91,
+          "usage": 0.216,
+          "two_strike_pitches": 92,
           "strikeouts": 21,
-          "putaway_rate": 0.2308
+          "putaway_rate": 0.2283
         },
         {
           "pitch_type": "CH",
@@ -107127,10 +107127,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0751,
-          "two_strike_pitches": 32,
+          "usage": 0.0728,
+          "two_strike_pitches": 31,
           "strikeouts": 7,
-          "putaway_rate": 0.2188
+          "putaway_rate": 0.2258
         },
         {
           "pitch_type": "CU",
@@ -118615,10 +118615,10 @@
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.408,
-          "two_strike_pitches": 51,
+          "usage": 0.416,
+          "two_strike_pitches": 52,
           "strikeouts": 14,
-          "putaway_rate": 0.2745
+          "putaway_rate": 0.2692
         },
         {
           "pitch_type": "SL",
@@ -118631,10 +118631,10 @@
         {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
-          "usage": 0.28,
-          "two_strike_pitches": 35,
+          "usage": 0.272,
+          "two_strike_pitches": 34,
           "strikeouts": 10,
-          "putaway_rate": 0.2857
+          "putaway_rate": 0.2941
         },
         {
           "pitch_type": "CH",
@@ -118649,10 +118649,10 @@
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.5102,
-          "two_strike_pitches": 25,
+          "usage": 0.5306,
+          "two_strike_pitches": 26,
           "strikeouts": 7,
-          "putaway_rate": 0.28
+          "putaway_rate": 0.2692
         },
         {
           "pitch_type": "SL",
@@ -118665,10 +118665,10 @@
         {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
-          "usage": 0.1837,
-          "two_strike_pitches": 9,
+          "usage": 0.1633,
+          "two_strike_pitches": 8,
           "strikeouts": 2,
-          "putaway_rate": 0.2222
+          "putaway_rate": 0.25
         },
         {
           "pitch_type": "CH",
