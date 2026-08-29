@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-28T21:04:21Z",
+  "last_updated": "2026-08-29T14:54:49Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -7314,9 +7314,9 @@
             "STL"
           ],
           "team_games": 120,
-          "two_strike_pitches": 39,
+          "two_strike_pitches": 40,
           "strikeouts": 6,
-          "putaway_rate": 0.1538
+          "putaway_rate": 0.15
         },
         {
           "player_id": 676106,
@@ -7824,9 +7824,9 @@
             "STL"
           ],
           "team_games": 120,
-          "two_strike_pitches": 30,
+          "two_strike_pitches": 31,
           "strikeouts": 4,
-          "putaway_rate": 0.1333
+          "putaway_rate": 0.129
         },
         {
           "player_id": 641743,
@@ -114219,18 +114219,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.1639,
-          "two_strike_pitches": 39,
+          "usage": 0.1681,
+          "two_strike_pitches": 40,
           "strikeouts": 6,
-          "putaway_rate": 0.1538
-        },
-        {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
-          "usage": 0.1513,
-          "two_strike_pitches": 36,
-          "strikeouts": 7,
-          "putaway_rate": 0.1944
+          "putaway_rate": 0.15
         },
         {
           "pitch_type": "CH",
@@ -114239,6 +114231,14 @@
           "two_strike_pitches": 35,
           "strikeouts": 6,
           "putaway_rate": 0.1714
+        },
+        {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.1471,
+          "two_strike_pitches": 35,
+          "strikeouts": 7,
+          "putaway_rate": 0.2
         },
         {
           "pitch_type": "SI",
@@ -114251,20 +114251,20 @@
       ],
       "vs_rhb": [
         {
-          "pitch_type": "FF",
-          "pitch_name": "Four-Seam Fastball",
+          "pitch_type": "FC",
+          "pitch_name": "Cutter",
           "usage": 0.2403,
           "two_strike_pitches": 31,
           "strikeouts": 4,
           "putaway_rate": 0.129
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
-          "usage": 0.2326,
-          "two_strike_pitches": 30,
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
+          "usage": 0.2403,
+          "two_strike_pitches": 31,
           "strikeouts": 4,
-          "putaway_rate": 0.1333
+          "putaway_rate": 0.129
         },
         {
           "pitch_type": "CU",
@@ -114277,10 +114277,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1938,
-          "two_strike_pitches": 25,
+          "usage": 0.186,
+          "two_strike_pitches": 24,
           "strikeouts": 5,
-          "putaway_rate": 0.2
+          "putaway_rate": 0.2083
         },
         {
           "pitch_type": "CH",
