@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-03T14:05:25Z",
+  "last_updated": "2026-09-04T13:58:52Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -25962,6 +25962,17 @@
           "putaway_rate": 0.1417
         },
         {
+          "player_id": 453286,
+          "player_name": "Scherzer, Max",
+          "teams": [
+            "TOR"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 71,
+          "strikeouts": 10,
+          "putaway_rate": 0.1408
+        },
+        {
           "player_id": 642100,
           "player_name": "Speier, Gabe",
           "teams": [
@@ -26017,17 +26028,6 @@
           "putaway_rate": 0.1364
         },
         {
-          "player_id": 643511,
-          "player_name": "Rogers, Tyler",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 81,
-          "strikeouts": 11,
-          "putaway_rate": 0.1358
-        },
-        {
           "player_id": 518876,
           "player_name": "Kelly, Merrill",
           "teams": [
@@ -26039,15 +26039,15 @@
           "putaway_rate": 0.1358
         },
         {
-          "player_id": 664141,
-          "player_name": "Brubaker, JT",
+          "player_id": 643511,
+          "player_name": "Rogers, Tyler",
           "teams": [
-            "SF"
+            "TOR"
           ],
-          "team_games": 120,
-          "two_strike_pitches": 83,
+          "team_games": 121,
+          "two_strike_pitches": 81,
           "strikeouts": 11,
-          "putaway_rate": 0.1325
+          "putaway_rate": 0.1358
         },
         {
           "player_id": 663567,
@@ -26056,6 +26056,17 @@
             "HOU"
           ],
           "team_games": 121,
+          "two_strike_pitches": 83,
+          "strikeouts": 11,
+          "putaway_rate": 0.1325
+        },
+        {
+          "player_id": 664141,
+          "player_name": "Brubaker, JT",
+          "teams": [
+            "SF"
+          ],
+          "team_games": 120,
           "two_strike_pitches": 83,
           "strikeouts": 11,
           "putaway_rate": 0.1325
@@ -26082,17 +26093,6 @@
           "two_strike_pitches": 84,
           "strikeouts": 11,
           "putaway_rate": 0.131
-        },
-        {
-          "player_id": 453286,
-          "player_name": "Scherzer, Max",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 69,
-          "strikeouts": 9,
-          "putaway_rate": 0.1304
         },
         {
           "player_id": 608372,
@@ -29054,6 +29054,17 @@
           "putaway_rate": 0.129
         },
         {
+          "player_id": 453286,
+          "player_name": "Scherzer, Max",
+          "teams": [
+            "TOR"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 32,
+          "strikeouts": 4,
+          "putaway_rate": 0.125
+        },
+        {
           "player_id": 668678,
           "player_name": "Gallen, Zac",
           "teams": [
@@ -29084,17 +29095,6 @@
           "team_games": 121,
           "two_strike_pitches": 50,
           "strikeouts": 5,
-          "putaway_rate": 0.1
-        },
-        {
-          "player_id": 453286,
-          "player_name": "Scherzer, Max",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 30,
-          "strikeouts": 3,
           "putaway_rate": 0.1
         },
         {
@@ -33274,10 +33274,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.3067,
-          "two_strike_pitches": 69,
-          "strikeouts": 9,
-          "putaway_rate": 0.1304
+          "usage": 0.3156,
+          "two_strike_pitches": 71,
+          "strikeouts": 10,
+          "putaway_rate": 0.1408
         },
         {
           "pitch_type": "CH",
@@ -33298,10 +33298,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.04,
-          "two_strike_pitches": 9,
-          "strikeouts": 1,
-          "putaway_rate": 0.1111
+          "usage": 0.0311,
+          "two_strike_pitches": 7,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ],
       "vs_rhb": [
@@ -33366,10 +33366,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2113,
-          "two_strike_pitches": 30,
-          "strikeouts": 3,
-          "putaway_rate": 0.1
+          "usage": 0.2254,
+          "two_strike_pitches": 32,
+          "strikeouts": 4,
+          "putaway_rate": 0.125
         },
         {
           "pitch_type": "CU",
@@ -33382,10 +33382,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0493,
-          "two_strike_pitches": 7,
-          "strikeouts": 1,
-          "putaway_rate": 0.1429
+          "usage": 0.0352,
+          "two_strike_pitches": 5,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ]
     },
@@ -78248,6 +78248,14 @@
       ],
       "overall": [
         {
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
+          "usage": 0.3,
+          "two_strike_pitches": 3,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
+        },
+        {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
           "usage": 0.2,
@@ -78274,16 +78282,8 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2,
-          "two_strike_pitches": 2,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
-          "pitch_type": "ST",
-          "pitch_name": "Sweeper",
-          "usage": 0.2,
-          "two_strike_pitches": 2,
+          "usage": 0.1,
+          "two_strike_pitches": 1,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
@@ -78324,16 +78324,16 @@
           "putaway_rate": 0.5
         },
         {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
           "usage": 0.4,
           "two_strike_pitches": 2,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
         {
-          "pitch_type": "ST",
-          "pitch_name": "Sweeper",
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
           "usage": 0.2,
           "two_strike_pitches": 1,
           "strikeouts": 0,
