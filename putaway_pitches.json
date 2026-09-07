@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T13:22:22Z",
+  "last_updated": "2026-09-07T15:28:21Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -30125,6 +30125,17 @@
           "putaway_rate": 0.1875
         },
         {
+          "player_id": 621111,
+          "player_name": "Buehler, Walker",
+          "teams": [
+            "SD"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 76,
+          "strikeouts": 14,
+          "putaway_rate": 0.1842
+        },
+        {
           "player_id": 669199,
           "player_name": "Bachar, Lake",
           "teams": [
@@ -30132,17 +30143,6 @@
             "PIT"
           ],
           "team_games": 241,
-          "two_strike_pitches": 75,
-          "strikeouts": 14,
-          "putaway_rate": 0.1867
-        },
-        {
-          "player_id": 621111,
-          "player_name": "Buehler, Walker",
-          "teams": [
-            "SD"
-          ],
-          "team_games": 121,
           "two_strike_pitches": 76,
           "strikeouts": 14,
           "putaway_rate": 0.1842
@@ -72290,18 +72290,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.2435,
-          "two_strike_pitches": 75,
+          "usage": 0.2468,
+          "two_strike_pitches": 76,
           "strikeouts": 14,
-          "putaway_rate": 0.1867
-        },
-        {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
-          "usage": 0.1883,
-          "two_strike_pitches": 58,
-          "strikeouts": 19,
-          "putaway_rate": 0.3276
+          "putaway_rate": 0.1842
         },
         {
           "pitch_type": "CU",
@@ -72310,6 +72302,14 @@
           "two_strike_pitches": 57,
           "strikeouts": 17,
           "putaway_rate": 0.2982
+        },
+        {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.1851,
+          "two_strike_pitches": 57,
+          "strikeouts": 19,
+          "putaway_rate": 0.3333
         },
         {
           "pitch_type": "FS",
@@ -72398,10 +72398,18 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1818,
-          "two_strike_pitches": 30,
+          "usage": 0.1758,
+          "two_strike_pitches": 29,
           "strikeouts": 13,
-          "putaway_rate": 0.4333
+          "putaway_rate": 0.4483
+        },
+        {
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
+          "usage": 0.1273,
+          "two_strike_pitches": 21,
+          "strikeouts": 4,
+          "putaway_rate": 0.1905
         },
         {
           "pitch_type": "FS",
@@ -72410,14 +72418,6 @@
           "two_strike_pitches": 20,
           "strikeouts": 2,
           "putaway_rate": 0.1
-        },
-        {
-          "pitch_type": "ST",
-          "pitch_name": "Sweeper",
-          "usage": 0.1212,
-          "two_strike_pitches": 20,
-          "strikeouts": 4,
-          "putaway_rate": 0.2
         },
         {
           "pitch_type": "SI",
