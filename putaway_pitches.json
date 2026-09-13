@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12T13:20:20Z",
+  "last_updated": "2026-09-13T14:02:50Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -100382,10 +100382,18 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1257,
-          "two_strike_pitches": 22,
+          "usage": 0.1143,
+          "two_strike_pitches": 20,
+          "strikeouts": 2,
+          "putaway_rate": 0.1
+        },
+        {
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
+          "usage": 0.0971,
+          "two_strike_pitches": 17,
           "strikeouts": 3,
-          "putaway_rate": 0.1364
+          "putaway_rate": 0.1765
         },
         {
           "pitch_type": "CH",
@@ -100394,14 +100402,6 @@
           "two_strike_pitches": 16,
           "strikeouts": 1,
           "putaway_rate": 0.0625
-        },
-        {
-          "pitch_type": "ST",
-          "pitch_name": "Sweeper",
-          "usage": 0.0857,
-          "two_strike_pitches": 15,
-          "strikeouts": 2,
-          "putaway_rate": 0.1333
         },
         {
           "pitch_type": "SI",
@@ -100424,18 +100424,18 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2308,
-          "two_strike_pitches": 15,
-          "strikeouts": 3,
-          "putaway_rate": 0.2
+          "usage": 0.2,
+          "two_strike_pitches": 13,
+          "strikeouts": 2,
+          "putaway_rate": 0.1538
         },
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.1538,
-          "two_strike_pitches": 10,
-          "strikeouts": 2,
-          "putaway_rate": 0.2
+          "usage": 0.1846,
+          "two_strike_pitches": 12,
+          "strikeouts": 3,
+          "putaway_rate": 0.25
         },
         {
           "pitch_type": "SI",
