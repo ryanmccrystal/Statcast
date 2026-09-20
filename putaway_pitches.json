@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-19T13:40:14Z",
+  "last_updated": "2026-09-20T13:54:07Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -133,6 +133,17 @@
           "putaway_rate": 0.2791
         },
         {
+          "player_id": 656302,
+          "player_name": "Cease, Dylan",
+          "teams": [
+            "TOR"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 79,
+          "strikeouts": 22,
+          "putaway_rate": 0.2785
+        },
+        {
           "player_id": 628452,
           "player_name": "Iglesias, Raisel",
           "teams": [
@@ -154,17 +165,6 @@
           "two_strike_pitches": 177,
           "strikeouts": 48,
           "putaway_rate": 0.2712
-        },
-        {
-          "player_id": 656302,
-          "player_name": "Cease, Dylan",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 78,
-          "strikeouts": 21,
-          "putaway_rate": 0.2692
         },
         {
           "player_id": 621112,
@@ -3068,6 +3068,17 @@
           "putaway_rate": 0.3026
         },
         {
+          "player_id": 656302,
+          "player_name": "Cease, Dylan",
+          "teams": [
+            "TOR"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 74,
+          "strikeouts": 22,
+          "putaway_rate": 0.2973
+        },
+        {
           "player_id": 663372,
           "player_name": "Feltner, Ryan",
           "teams": [
@@ -3121,17 +3132,6 @@
           "two_strike_pitches": 52,
           "strikeouts": 15,
           "putaway_rate": 0.2885
-        },
-        {
-          "player_id": 656302,
-          "player_name": "Cease, Dylan",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 73,
-          "strikeouts": 21,
-          "putaway_rate": 0.2877
         },
         {
           "player_id": 596133,
@@ -8798,17 +8798,6 @@
           "putaway_rate": 0.2472
         },
         {
-          "player_id": 656302,
-          "player_name": "Cease, Dylan",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 301,
-          "strikeouts": 74,
-          "putaway_rate": 0.2458
-        },
-        {
           "player_id": 690997,
           "player_name": "McLean, Nolan",
           "teams": [
@@ -8863,6 +8852,17 @@
           "two_strike_pitches": 41,
           "strikeouts": 10,
           "putaway_rate": 0.2439
+        },
+        {
+          "player_id": 656302,
+          "player_name": "Cease, Dylan",
+          "teams": [
+            "TOR"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 300,
+          "strikeouts": 73,
+          "putaway_rate": 0.2433
         },
         {
           "player_id": 695611,
@@ -16824,17 +16824,6 @@
           "putaway_rate": 0.1789
         },
         {
-          "player_id": 656302,
-          "player_name": "Cease, Dylan",
-          "teams": [
-            "TOR"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 168,
-          "strikeouts": 30,
-          "putaway_rate": 0.1786
-        },
-        {
           "player_id": 669432,
           "player_name": "Rogers, Trevor",
           "teams": [
@@ -16866,6 +16855,17 @@
           "two_strike_pitches": 40,
           "strikeouts": 7,
           "putaway_rate": 0.175
+        },
+        {
+          "player_id": 656302,
+          "player_name": "Cease, Dylan",
+          "teams": [
+            "TOR"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 167,
+          "strikeouts": 29,
+          "putaway_rate": 0.1737
         },
         {
           "player_id": 676083,
@@ -55378,10 +55378,10 @@
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.3987,
-          "two_strike_pitches": 301,
-          "strikeouts": 74,
-          "putaway_rate": 0.2458
+          "usage": 0.3974,
+          "two_strike_pitches": 300,
+          "strikeouts": 73,
+          "putaway_rate": 0.2433
         },
         {
           "pitch_type": "SL",
@@ -55394,10 +55394,10 @@
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.1033,
-          "two_strike_pitches": 78,
-          "strikeouts": 21,
-          "putaway_rate": 0.2692
+          "usage": 0.1046,
+          "two_strike_pitches": 79,
+          "strikeouts": 22,
+          "putaway_rate": 0.2785
         },
         {
           "pitch_type": "SI",
@@ -55478,10 +55478,10 @@
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.3758,
-          "two_strike_pitches": 168,
-          "strikeouts": 30,
-          "putaway_rate": 0.1786
+          "usage": 0.3736,
+          "two_strike_pitches": 167,
+          "strikeouts": 29,
+          "putaway_rate": 0.1737
         },
         {
           "pitch_type": "SL",
@@ -55494,10 +55494,10 @@
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.1633,
-          "two_strike_pitches": 73,
-          "strikeouts": 21,
-          "putaway_rate": 0.2877
+          "usage": 0.1655,
+          "two_strike_pitches": 74,
+          "strikeouts": 22,
+          "putaway_rate": 0.2973
         },
         {
           "pitch_type": "SI",
