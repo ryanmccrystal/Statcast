@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24T14:36:04Z",
+  "last_updated": "2026-09-25T14:57:11Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -62831,10 +62831,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.2368,
-          "two_strike_pitches": 27,
+          "usage": 0.2281,
+          "two_strike_pitches": 26,
           "strikeouts": 4,
-          "putaway_rate": 0.1481
+          "putaway_rate": 0.1538
         },
         {
           "pitch_type": "FS",
@@ -62855,10 +62855,10 @@
         {
           "pitch_type": "FF",
           "pitch_name": "Four-Seam Fastball",
-          "usage": 0.0351,
-          "two_strike_pitches": 4,
+          "usage": 0.0439,
+          "two_strike_pitches": 5,
           "strikeouts": 1,
-          "putaway_rate": 0.25
+          "putaway_rate": 0.2
         },
         {
           "pitch_type": "CU",
@@ -62947,10 +62947,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.2264,
-          "two_strike_pitches": 12,
+          "usage": 0.2075,
+          "two_strike_pitches": 11,
           "strikeouts": 1,
-          "putaway_rate": 0.0833
+          "putaway_rate": 0.0909
         },
         {
           "pitch_type": "SI",
@@ -62969,20 +62969,20 @@
           "putaway_rate": 0.1818
         },
         {
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
+          "usage": 0.0566,
+          "two_strike_pitches": 3,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
+        },
+        {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
           "usage": 0.0377,
           "two_strike_pitches": 2,
           "strikeouts": 1,
           "putaway_rate": 0.5
-        },
-        {
-          "pitch_type": "FF",
-          "pitch_name": "Four-Seam Fastball",
-          "usage": 0.0377,
-          "two_strike_pitches": 2,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
         }
       ]
     },
@@ -74258,20 +74258,20 @@
           "putaway_rate": 0.125
         },
         {
+          "pitch_type": "CU",
+          "pitch_name": "Curveball",
+          "usage": 0.1442,
+          "two_strike_pitches": 30,
+          "strikeouts": 4,
+          "putaway_rate": 0.1333
+        },
+        {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
           "usage": 0.1298,
           "two_strike_pitches": 27,
           "strikeouts": 3,
           "putaway_rate": 0.1111
-        },
-        {
-          "pitch_type": "CU",
-          "pitch_name": "Curveball",
-          "usage": 0.125,
-          "two_strike_pitches": 26,
-          "strikeouts": 3,
-          "putaway_rate": 0.1154
         },
         {
           "pitch_type": "SL",
@@ -74282,20 +74282,20 @@
           "putaway_rate": 0.125
         },
         {
-          "pitch_type": "CS",
-          "pitch_name": "Slow Curve",
-          "usage": 0.0337,
-          "two_strike_pitches": 7,
-          "strikeouts": 1,
-          "putaway_rate": 0.1429
-        },
-        {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
           "usage": 0.0288,
           "two_strike_pitches": 6,
           "strikeouts": 2,
           "putaway_rate": 0.3333
+        },
+        {
+          "pitch_type": "CS",
+          "pitch_name": "Slow Curve",
+          "usage": 0.0144,
+          "two_strike_pitches": 3,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         },
         {
           "pitch_type": "ST",
@@ -74326,10 +74326,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.1269,
-          "two_strike_pitches": 17,
+          "usage": 0.1418,
+          "two_strike_pitches": 19,
           "strikeouts": 3,
-          "putaway_rate": 0.1765
+          "putaway_rate": 0.1579
         },
         {
           "pitch_type": "SI",
@@ -74348,20 +74348,20 @@
           "putaway_rate": 0.1538
         },
         {
-          "pitch_type": "CS",
-          "pitch_name": "Slow Curve",
-          "usage": 0.0299,
-          "two_strike_pitches": 4,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
           "usage": 0.0224,
           "two_strike_pitches": 3,
           "strikeouts": 1,
           "putaway_rate": 0.3333
+        },
+        {
+          "pitch_type": "CS",
+          "pitch_name": "Slow Curve",
+          "usage": 0.0149,
+          "two_strike_pitches": 2,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         },
         {
           "pitch_type": "ST",
@@ -74390,28 +74390,20 @@
           "putaway_rate": 0.1111
         },
         {
+          "pitch_type": "CU",
+          "pitch_name": "Curveball",
+          "usage": 0.1486,
+          "two_strike_pitches": 11,
+          "strikeouts": 1,
+          "putaway_rate": 0.0909
+        },
+        {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
           "usage": 0.1351,
           "two_strike_pitches": 10,
           "strikeouts": 2,
           "putaway_rate": 0.2
-        },
-        {
-          "pitch_type": "CU",
-          "pitch_name": "Curveball",
-          "usage": 0.1216,
-          "two_strike_pitches": 9,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
-          "pitch_type": "CS",
-          "pitch_name": "Slow Curve",
-          "usage": 0.0405,
-          "two_strike_pitches": 3,
-          "strikeouts": 1,
-          "putaway_rate": 0.3333
         },
         {
           "pitch_type": "FC",
@@ -74426,6 +74418,14 @@
           "pitch_name": "Slider",
           "usage": 0.0405,
           "two_strike_pitches": 3,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
+        },
+        {
+          "pitch_type": "CS",
+          "pitch_name": "Slow Curve",
+          "usage": 0.0135,
+          "two_strike_pitches": 1,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
