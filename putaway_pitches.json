@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-26T14:01:39Z",
+  "last_updated": "2026-09-27T14:58:15Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -18284,9 +18284,9 @@
             "LAD"
           ],
           "team_games": 120,
-          "two_strike_pitches": 64,
+          "two_strike_pitches": 63,
           "strikeouts": 10,
-          "putaway_rate": 0.1562
+          "putaway_rate": 0.1587
         }
       ],
       "vs_rhb": [
@@ -18332,9 +18332,9 @@
             "LAD"
           ],
           "team_games": 120,
-          "two_strike_pitches": 33,
+          "two_strike_pitches": 32,
           "strikeouts": 5,
-          "putaway_rate": 0.1515
+          "putaway_rate": 0.1562
         }
       ]
     },
@@ -18549,9 +18549,9 @@
             "LAD"
           ],
           "team_games": 120,
-          "two_strike_pitches": 200,
+          "two_strike_pitches": 201,
           "strikeouts": 42,
-          "putaway_rate": 0.21
+          "putaway_rate": 0.209
         },
         {
           "player_id": 668964,
@@ -19229,17 +19229,6 @@
           "putaway_rate": 0.2326
         },
         {
-          "player_id": 808963,
-          "player_name": "Sasaki, Roki",
-          "teams": [
-            "LAD"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 122,
-          "strikeouts": 28,
-          "putaway_rate": 0.2295
-        },
-        {
           "player_id": 691725,
           "player_name": "Painter, Andrew",
           "teams": [
@@ -19249,6 +19238,17 @@
           "two_strike_pitches": 57,
           "strikeouts": 13,
           "putaway_rate": 0.2281
+        },
+        {
+          "player_id": 808963,
+          "player_name": "Sasaki, Roki",
+          "teams": [
+            "LAD"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 123,
+          "strikeouts": 28,
+          "putaway_rate": 0.2276
         },
         {
           "player_id": 668964,
@@ -119353,10 +119353,10 @@
         {
           "pitch_type": "FS",
           "pitch_name": "Splitter",
-          "usage": 0.3738,
-          "two_strike_pitches": 200,
+          "usage": 0.3757,
+          "two_strike_pitches": 201,
           "strikeouts": 42,
-          "putaway_rate": 0.21
+          "putaway_rate": 0.209
         },
         {
           "pitch_type": "FF",
@@ -119377,10 +119377,10 @@
         {
           "pitch_type": "FO",
           "pitch_name": "Forkball",
-          "usage": 0.1196,
-          "two_strike_pitches": 64,
+          "usage": 0.1178,
+          "two_strike_pitches": 63,
           "strikeouts": 10,
-          "putaway_rate": 0.1562
+          "putaway_rate": 0.1587
         }
       ],
       "vs_rhb": [
@@ -119421,10 +119421,10 @@
         {
           "pitch_type": "FS",
           "pitch_name": "Splitter",
-          "usage": 0.3974,
-          "two_strike_pitches": 122,
+          "usage": 0.4007,
+          "two_strike_pitches": 123,
           "strikeouts": 28,
-          "putaway_rate": 0.2295
+          "putaway_rate": 0.2276
         },
         {
           "pitch_type": "FF",
@@ -119445,10 +119445,10 @@
         {
           "pitch_type": "FO",
           "pitch_name": "Forkball",
-          "usage": 0.1075,
-          "two_strike_pitches": 33,
+          "usage": 0.1042,
+          "two_strike_pitches": 32,
           "strikeouts": 5,
-          "putaway_rate": 0.1515
+          "putaway_rate": 0.1562
         }
       ]
     },
