@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-28T17:56:47Z",
+  "last_updated": "2026-09-29T16:19:07Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -49590,10 +49590,10 @@
         {
           "pitch_type": "FS",
           "pitch_name": "Splitter",
-          "usage": 0.5,
-          "two_strike_pitches": 14,
+          "usage": 0.4643,
+          "two_strike_pitches": 13,
           "strikeouts": 2,
-          "putaway_rate": 0.1429
+          "putaway_rate": 0.1538
         },
         {
           "pitch_type": "FF",
@@ -49606,10 +49606,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1071,
-          "two_strike_pitches": 3,
+          "usage": 0.1429,
+          "two_strike_pitches": 4,
           "strikeouts": 1,
-          "putaway_rate": 0.3333
+          "putaway_rate": 0.25
         }
       ],
       "vs_rhb": [
@@ -49622,20 +49622,20 @@
           "putaway_rate": 0.0
         },
         {
-          "pitch_type": "FS",
-          "pitch_name": "Splitter",
-          "usage": 0.3077,
-          "two_strike_pitches": 4,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
           "pitch_type": "SL",
           "pitch_name": "Slider",
+          "usage": 0.3077,
+          "two_strike_pitches": 4,
+          "strikeouts": 1,
+          "putaway_rate": 0.25
+        },
+        {
+          "pitch_type": "FS",
+          "pitch_name": "Splitter",
           "usage": 0.2308,
           "two_strike_pitches": 3,
-          "strikeouts": 1,
-          "putaway_rate": 0.3333
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ],
       "vs_lhb": [
@@ -84884,6 +84884,14 @@
           "putaway_rate": 0.1364
         },
         {
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
+          "usage": 0.1147,
+          "two_strike_pitches": 25,
+          "strikeouts": 5,
+          "putaway_rate": 0.2
+        },
+        {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
           "usage": 0.1055,
@@ -84892,20 +84900,12 @@
           "putaway_rate": 0.087
         },
         {
-          "pitch_type": "ST",
-          "pitch_name": "Sweeper",
-          "usage": 0.1055,
-          "two_strike_pitches": 23,
-          "strikeouts": 5,
-          "putaway_rate": 0.2174
-        },
-        {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0826,
-          "two_strike_pitches": 18,
+          "usage": 0.0734,
+          "two_strike_pitches": 16,
           "strikeouts": 5,
-          "putaway_rate": 0.2778
+          "putaway_rate": 0.3125
         }
       ],
       "vs_rhb": [
@@ -84920,18 +84920,18 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.17,
-          "two_strike_pitches": 17,
+          "usage": 0.18,
+          "two_strike_pitches": 18,
           "strikeouts": 3,
-          "putaway_rate": 0.1765
+          "putaway_rate": 0.1667
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.13,
-          "two_strike_pitches": 13,
+          "usage": 0.12,
+          "two_strike_pitches": 12,
           "strikeouts": 5,
-          "putaway_rate": 0.3846
+          "putaway_rate": 0.4167
         },
         {
           "pitch_type": "CH",
@@ -84962,16 +84962,16 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0508,
-          "two_strike_pitches": 6,
+          "usage": 0.0593,
+          "two_strike_pitches": 7,
           "strikeouts": 2,
-          "putaway_rate": 0.3333
+          "putaway_rate": 0.2857
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0424,
-          "two_strike_pitches": 5,
+          "usage": 0.0339,
+          "two_strike_pitches": 4,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
@@ -112135,10 +112135,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.2093,
-          "two_strike_pitches": 27,
-          "strikeouts": 4,
-          "putaway_rate": 0.1481
+          "usage": 0.2171,
+          "two_strike_pitches": 28,
+          "strikeouts": 5,
+          "putaway_rate": 0.1786
         },
         {
           "pitch_type": "SI",
@@ -112151,10 +112151,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.155,
-          "two_strike_pitches": 20,
-          "strikeouts": 3,
-          "putaway_rate": 0.15
+          "usage": 0.1473,
+          "two_strike_pitches": 19,
+          "strikeouts": 2,
+          "putaway_rate": 0.1053
         },
         {
           "pitch_type": "CH",
@@ -112193,10 +112193,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.2881,
-          "two_strike_pitches": 17,
-          "strikeouts": 1,
-          "putaway_rate": 0.0588
+          "usage": 0.3051,
+          "two_strike_pitches": 18,
+          "strikeouts": 2,
+          "putaway_rate": 0.1111
         },
         {
           "pitch_type": "SI",
@@ -112209,10 +112209,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.1356,
-          "two_strike_pitches": 8,
-          "strikeouts": 2,
-          "putaway_rate": 0.25
+          "usage": 0.1186,
+          "two_strike_pitches": 7,
+          "strikeouts": 1,
+          "putaway_rate": 0.1429
         },
         {
           "pitch_type": "CU",
@@ -116600,16 +116600,24 @@
           "putaway_rate": 0.1429
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
-          "usage": 0.1176,
-          "two_strike_pitches": 2,
+          "pitch_type": "CH",
+          "pitch_name": "Changeup",
+          "usage": 0.0588,
+          "two_strike_pitches": 1,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
         {
-          "pitch_type": "CH",
-          "pitch_name": "Changeup",
+          "pitch_type": "FC",
+          "pitch_name": "Cutter",
+          "usage": 0.0588,
+          "two_strike_pitches": 1,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
+        },
+        {
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
           "usage": 0.0588,
           "two_strike_pitches": 1,
           "strikeouts": 0,
@@ -116668,8 +116676,8 @@
           "putaway_rate": 0.0
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
           "usage": 0.1667,
           "two_strike_pitches": 1,
           "strikeouts": 0,
