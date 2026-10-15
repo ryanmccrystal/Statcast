@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-14T14:51:48Z",
+  "last_updated": "2026-10-15T14:38:51Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -24406,17 +24406,6 @@
           "putaway_rate": 0.2683
         },
         {
-          "player_id": 676974,
-          "player_name": "Meyer, Max",
-          "teams": [
-            "MIA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 131,
-          "strikeouts": 35,
-          "putaway_rate": 0.2672
-        },
-        {
           "player_id": 681911,
           "player_name": "Vesia, Alex",
           "teams": [
@@ -24448,6 +24437,17 @@
           "two_strike_pitches": 110,
           "strikeouts": 29,
           "putaway_rate": 0.2636
+        },
+        {
+          "player_id": 676974,
+          "player_name": "Meyer, Max",
+          "teams": [
+            "MIA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 133,
+          "strikeouts": 35,
+          "putaway_rate": 0.2632
         },
         {
           "player_id": 681517,
@@ -26902,43 +26902,10 @@
           "putaway_rate": 0.2237
         },
         {
-          "player_id": 683003,
-          "player_name": "Jones, Jared",
-          "teams": [
-            "PIT"
-          ],
-          "team_games": 121,
-          "two_strike_pitches": 45,
-          "strikeouts": 10,
-          "putaway_rate": 0.2222
-        },
-        {
           "player_id": 696147,
           "player_name": "Bachman, Sam",
           "teams": [
             "LAA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 63,
-          "strikeouts": 14,
-          "putaway_rate": 0.2222
-        },
-        {
-          "player_id": 547179,
-          "player_name": "Lorenzen, Michael",
-          "teams": [
-            "COL"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 36,
-          "strikeouts": 8,
-          "putaway_rate": 0.2222
-        },
-        {
-          "player_id": 676974,
-          "player_name": "Meyer, Max",
-          "teams": [
-            "MIA"
           ],
           "team_games": 120,
           "two_strike_pitches": 63,
@@ -26954,6 +26921,28 @@
           "team_games": 120,
           "two_strike_pitches": 72,
           "strikeouts": 16,
+          "putaway_rate": 0.2222
+        },
+        {
+          "player_id": 547179,
+          "player_name": "Lorenzen, Michael",
+          "teams": [
+            "COL"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 36,
+          "strikeouts": 8,
+          "putaway_rate": 0.2222
+        },
+        {
+          "player_id": 683003,
+          "player_name": "Jones, Jared",
+          "teams": [
+            "PIT"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 45,
+          "strikeouts": 10,
           "putaway_rate": 0.2222
         },
         {
@@ -26978,6 +26967,17 @@
           "two_strike_pitches": 93,
           "strikeouts": 20,
           "putaway_rate": 0.2151
+        },
+        {
+          "player_id": 676974,
+          "player_name": "Meyer, Max",
+          "teams": [
+            "MIA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 66,
+          "strikeouts": 14,
+          "putaway_rate": 0.2121
         },
         {
           "player_id": 656288,
@@ -27869,9 +27869,9 @@
             "MIA"
           ],
           "team_games": 120,
-          "two_strike_pitches": 68,
+          "two_strike_pitches": 67,
           "strikeouts": 21,
-          "putaway_rate": 0.3088
+          "putaway_rate": 0.3134
         },
         {
           "player_id": 680732,
@@ -29270,6 +29270,17 @@
           "putaway_rate": 0.2807
         },
         {
+          "player_id": 676974,
+          "player_name": "Meyer, Max",
+          "teams": [
+            "MIA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 249,
+          "strikeouts": 69,
+          "putaway_rate": 0.2771
+        },
+        {
           "player_id": 592791,
           "player_name": "Taillon, Jameson",
           "teams": [
@@ -29302,17 +29313,6 @@
           "two_strike_pitches": 40,
           "strikeouts": 11,
           "putaway_rate": 0.275
-        },
-        {
-          "player_id": 676974,
-          "player_name": "Meyer, Max",
-          "teams": [
-            "MIA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 251,
-          "strikeouts": 69,
-          "putaway_rate": 0.2749
         },
         {
           "player_id": 669622,
@@ -30999,6 +30999,17 @@
           "putaway_rate": 0.2456
         },
         {
+          "player_id": 676974,
+          "player_name": "Meyer, Max",
+          "teams": [
+            "MIA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 102,
+          "strikeouts": 25,
+          "putaway_rate": 0.2451
+        },
+        {
           "player_id": 686993,
           "player_name": "Sterner, Justin",
           "teams": [
@@ -31041,17 +31052,6 @@
           "two_strike_pitches": 67,
           "strikeouts": 16,
           "putaway_rate": 0.2388
-        },
-        {
-          "player_id": 676974,
-          "player_name": "Meyer, Max",
-          "teams": [
-            "MIA"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 105,
-          "strikeouts": 25,
-          "putaway_rate": 0.2381
         },
         {
           "player_id": 670059,
@@ -32181,15 +32181,15 @@
           "putaway_rate": 0.3023
         },
         {
-          "player_id": 676974,
-          "player_name": "Meyer, Max",
+          "player_id": 657277,
+          "player_name": "Webb, Logan",
           "teams": [
-            "MIA"
+            "SF"
           ],
           "team_games": 120,
-          "two_strike_pitches": 146,
-          "strikeouts": 44,
-          "putaway_rate": 0.3014
+          "two_strike_pitches": 60,
+          "strikeouts": 18,
+          "putaway_rate": 0.3
         },
         {
           "player_id": 695611,
@@ -32203,15 +32203,15 @@
           "putaway_rate": 0.3
         },
         {
-          "player_id": 657277,
-          "player_name": "Webb, Logan",
+          "player_id": 676974,
+          "player_name": "Meyer, Max",
           "teams": [
-            "SF"
+            "MIA"
           ],
           "team_games": 120,
-          "two_strike_pitches": 60,
-          "strikeouts": 18,
-          "putaway_rate": 0.3
+          "two_strike_pitches": 147,
+          "strikeouts": 44,
+          "putaway_rate": 0.2993
         },
         {
           "player_id": 669622,
@@ -85638,18 +85638,18 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.4799,
-          "two_strike_pitches": 251,
+          "usage": 0.4761,
+          "two_strike_pitches": 249,
           "strikeouts": 69,
-          "putaway_rate": 0.2749
+          "putaway_rate": 0.2771
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2505,
-          "two_strike_pitches": 131,
+          "usage": 0.2543,
+          "two_strike_pitches": 133,
           "strikeouts": 35,
-          "putaway_rate": 0.2672
+          "putaway_rate": 0.2632
         },
         {
           "pitch_type": "FF",
@@ -85680,18 +85680,18 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.473,
-          "two_strike_pitches": 105,
+          "usage": 0.4595,
+          "two_strike_pitches": 102,
           "strikeouts": 25,
-          "putaway_rate": 0.2381
+          "putaway_rate": 0.2451
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2838,
-          "two_strike_pitches": 63,
+          "usage": 0.2973,
+          "two_strike_pitches": 66,
           "strikeouts": 14,
-          "putaway_rate": 0.2222
+          "putaway_rate": 0.2121
         },
         {
           "pitch_type": "FF",
@@ -85722,18 +85722,18 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.485,
-          "two_strike_pitches": 146,
+          "usage": 0.4884,
+          "two_strike_pitches": 147,
           "strikeouts": 44,
-          "putaway_rate": 0.3014
+          "putaway_rate": 0.2993
         },
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2259,
-          "two_strike_pitches": 68,
+          "usage": 0.2226,
+          "two_strike_pitches": 67,
           "strikeouts": 21,
-          "putaway_rate": 0.3088
+          "putaway_rate": 0.3134
         },
         {
           "pitch_type": "FF",
@@ -90940,16 +90940,8 @@
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.0805,
-          "two_strike_pitches": 7,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
-          "pitch_type": "FS",
-          "pitch_name": "Splitter",
-          "usage": 0.0115,
-          "two_strike_pitches": 1,
+          "usage": 0.092,
+          "two_strike_pitches": 8,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
@@ -91008,16 +91000,8 @@
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.0938,
-          "two_strike_pitches": 6,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
-          "pitch_type": "FS",
-          "pitch_name": "Splitter",
-          "usage": 0.0156,
-          "two_strike_pitches": 1,
+          "usage": 0.1094,
+          "two_strike_pitches": 7,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
