@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-19T16:45:52Z",
+  "last_updated": "2026-10-20T14:38:38Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -4514,15 +4514,15 @@
           "putaway_rate": 0.2561
         },
         {
-          "player_id": 554430,
-          "player_name": "Wheeler, Zack",
+          "player_id": 702275,
+          "player_name": "Ritchie, JR",
           "teams": [
-            "PHI"
+            "ATL"
           ],
-          "team_games": 121,
-          "two_strike_pitches": 80,
-          "strikeouts": 20,
-          "putaway_rate": 0.25
+          "team_games": 120,
+          "two_strike_pitches": 115,
+          "strikeouts": 29,
+          "putaway_rate": 0.2522
         },
         {
           "player_id": 663436,
@@ -4533,6 +4533,17 @@
           "team_games": 118,
           "two_strike_pitches": 84,
           "strikeouts": 21,
+          "putaway_rate": 0.25
+        },
+        {
+          "player_id": 554430,
+          "player_name": "Wheeler, Zack",
+          "teams": [
+            "PHI"
+          ],
+          "team_games": 121,
+          "two_strike_pitches": 80,
+          "strikeouts": 20,
           "putaway_rate": 0.25
         },
         {
@@ -4567,17 +4578,6 @@
           "two_strike_pitches": 69,
           "strikeouts": 17,
           "putaway_rate": 0.2464
-        },
-        {
-          "player_id": 702275,
-          "player_name": "Ritchie, JR",
-          "teams": [
-            "ATL"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 114,
-          "strikeouts": 28,
-          "putaway_rate": 0.2456
         },
         {
           "player_id": 805673,
@@ -6282,6 +6282,17 @@
           "putaway_rate": 0.2195
         },
         {
+          "player_id": 702275,
+          "player_name": "Ritchie, JR",
+          "teams": [
+            "ATL"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 73,
+          "strikeouts": 16,
+          "putaway_rate": 0.2192
+        },
+        {
           "player_id": 687075,
           "player_name": "Sproat, Brandon",
           "teams": [
@@ -6324,17 +6335,6 @@
           "two_strike_pitches": 84,
           "strikeouts": 18,
           "putaway_rate": 0.2143
-        },
-        {
-          "player_id": 702275,
-          "player_name": "Ritchie, JR",
-          "teams": [
-            "ATL"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 72,
-          "strikeouts": 15,
-          "putaway_rate": 0.2083
         },
         {
           "player_id": 543243,
@@ -98394,18 +98394,18 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0889,
-          "two_strike_pitches": 4,
+          "usage": 0.0667,
+          "two_strike_pitches": 3,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.0222,
-          "two_strike_pitches": 1,
+          "usage": 0.0444,
+          "two_strike_pitches": 2,
           "strikeouts": 1,
-          "putaway_rate": 1.0
+          "putaway_rate": 0.5
         }
       ],
       "vs_rhb": [
@@ -98460,8 +98460,8 @@
           "putaway_rate": 0.2
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
+          "pitch_type": "ST",
+          "pitch_name": "Sweeper",
           "usage": 0.0417,
           "two_strike_pitches": 1,
           "strikeouts": 0,
@@ -116200,10 +116200,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.4302,
-          "two_strike_pitches": 114,
-          "strikeouts": 28,
-          "putaway_rate": 0.2456
+          "usage": 0.434,
+          "two_strike_pitches": 115,
+          "strikeouts": 29,
+          "putaway_rate": 0.2522
         },
         {
           "pitch_type": "CH",
@@ -116230,20 +116230,20 @@
           "putaway_rate": 0.2105
         },
         {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
+          "pitch_type": "FC",
+          "pitch_name": "Cutter",
           "usage": 0.0415,
           "two_strike_pitches": 11,
           "strikeouts": 1,
           "putaway_rate": 0.0909
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
-          "usage": 0.0377,
-          "two_strike_pitches": 10,
-          "strikeouts": 1,
-          "putaway_rate": 0.1
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.034,
+          "two_strike_pitches": 9,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         }
       ],
       "vs_rhb": [
@@ -116272,6 +116272,14 @@
           "putaway_rate": 0.1818
         },
         {
+          "pitch_type": "FC",
+          "pitch_name": "Cutter",
+          "usage": 0.0879,
+          "two_strike_pitches": 8,
+          "strikeouts": 1,
+          "putaway_rate": 0.125
+        },
+        {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
           "usage": 0.0879,
@@ -116280,18 +116288,10 @@
           "putaway_rate": 0.125
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
-          "usage": 0.0769,
-          "two_strike_pitches": 7,
-          "strikeouts": 1,
-          "putaway_rate": 0.1429
-        },
-        {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0659,
-          "two_strike_pitches": 6,
+          "usage": 0.0549,
+          "two_strike_pitches": 5,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
@@ -116300,10 +116300,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.4138,
-          "two_strike_pitches": 72,
-          "strikeouts": 15,
-          "putaway_rate": 0.2083
+          "usage": 0.4195,
+          "two_strike_pitches": 73,
+          "strikeouts": 16,
+          "putaway_rate": 0.2192
         },
         {
           "pitch_type": "CH",
@@ -116332,10 +116332,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.0287,
-          "two_strike_pitches": 5,
-          "strikeouts": 1,
-          "putaway_rate": 0.2
+          "usage": 0.023,
+          "two_strike_pitches": 4,
+          "strikeouts": 0,
+          "putaway_rate": 0.0
         },
         {
           "pitch_type": "FC",
