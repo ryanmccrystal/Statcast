@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-28T16:25:17Z",
+  "last_updated": "2026-10-29T16:34:05Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -24848,17 +24848,6 @@
           "putaway_rate": 0.2333
         },
         {
-          "player_id": 693821,
-          "player_name": "Elder, Bryce",
-          "teams": [
-            "ATL"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 168,
-          "strikeouts": 39,
-          "putaway_rate": 0.2321
-        },
-        {
           "player_id": 701519,
           "player_name": "Adams, Travis",
           "teams": [
@@ -24868,6 +24857,17 @@
           "two_strike_pitches": 56,
           "strikeouts": 13,
           "putaway_rate": 0.2321
+        },
+        {
+          "player_id": 666374,
+          "player_name": "Brash, Matt",
+          "teams": [
+            "SEA"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 52,
+          "strikeouts": 12,
+          "putaway_rate": 0.2308
         },
         {
           "player_id": 669302,
@@ -24881,14 +24881,14 @@
           "putaway_rate": 0.2308
         },
         {
-          "player_id": 666374,
-          "player_name": "Brash, Matt",
+          "player_id": 693821,
+          "player_name": "Elder, Bryce",
           "teams": [
-            "SEA"
+            "ATL"
           ],
           "team_games": 120,
-          "two_strike_pitches": 52,
-          "strikeouts": 12,
+          "two_strike_pitches": 169,
+          "strikeouts": 39,
           "putaway_rate": 0.2308
         },
         {
@@ -26781,17 +26781,6 @@
           "putaway_rate": 0.2323
         },
         {
-          "player_id": 693821,
-          "player_name": "Elder, Bryce",
-          "teams": [
-            "ATL"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 69,
-          "strikeouts": 16,
-          "putaway_rate": 0.2319
-        },
-        {
           "player_id": 669276,
           "player_name": "Lee, Dylan",
           "teams": [
@@ -26823,6 +26812,17 @@
           "two_strike_pitches": 39,
           "strikeouts": 9,
           "putaway_rate": 0.2308
+        },
+        {
+          "player_id": 693821,
+          "player_name": "Elder, Bryce",
+          "teams": [
+            "ATL"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 70,
+          "strikeouts": 16,
+          "putaway_rate": 0.2286
         },
         {
           "player_id": 594798,
@@ -107507,10 +107507,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.3373,
-          "two_strike_pitches": 168,
+          "usage": 0.3394,
+          "two_strike_pitches": 169,
           "strikeouts": 39,
-          "putaway_rate": 0.2321
+          "putaway_rate": 0.2308
         },
         {
           "pitch_type": "SI",
@@ -107539,10 +107539,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0602,
-          "two_strike_pitches": 30,
+          "usage": 0.0582,
+          "two_strike_pitches": 29,
           "strikeouts": 4,
-          "putaway_rate": 0.1333
+          "putaway_rate": 0.1379
         }
       ],
       "vs_rhb": [
@@ -107557,10 +107557,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.3613,
-          "two_strike_pitches": 69,
+          "usage": 0.3665,
+          "two_strike_pitches": 70,
           "strikeouts": 16,
-          "putaway_rate": 0.2319
+          "putaway_rate": 0.2286
         },
         {
           "pitch_type": "FF",
@@ -107581,8 +107581,8 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0209,
-          "two_strike_pitches": 4,
+          "usage": 0.0157,
+          "two_strike_pitches": 3,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
@@ -119099,10 +119099,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2447,
-          "two_strike_pitches": 23,
+          "usage": 0.2553,
+          "two_strike_pitches": 24,
           "strikeouts": 3,
-          "putaway_rate": 0.1304
+          "putaway_rate": 0.125
         },
         {
           "pitch_type": "CH",
@@ -119115,10 +119115,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.1064,
-          "two_strike_pitches": 10,
+          "usage": 0.0957,
+          "two_strike_pitches": 9,
           "strikeouts": 1,
-          "putaway_rate": 0.1
+          "putaway_rate": 0.1111
         },
         {
           "pitch_type": "SI",
@@ -119183,10 +119183,10 @@
         {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.2222,
-          "two_strike_pitches": 10,
+          "usage": 0.2444,
+          "two_strike_pitches": 11,
           "strikeouts": 2,
-          "putaway_rate": 0.2
+          "putaway_rate": 0.1818
         },
         {
           "pitch_type": "CH",
@@ -119199,10 +119199,10 @@
         {
           "pitch_type": "ST",
           "pitch_name": "Sweeper",
-          "usage": 0.1111,
-          "two_strike_pitches": 5,
+          "usage": 0.0889,
+          "two_strike_pitches": 4,
           "strikeouts": 1,
-          "putaway_rate": 0.2
+          "putaway_rate": 0.25
         },
         {
           "pitch_type": "SI",
