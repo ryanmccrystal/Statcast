@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09T20:22:18Z",
+  "last_updated": "2026-11-10T17:26:56Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -68226,16 +68226,16 @@
         {
           "pitch_type": "SI",
           "pitch_name": "Sinker",
-          "usage": 0.2174,
-          "two_strike_pitches": 5,
+          "usage": 0.1739,
+          "two_strike_pitches": 4,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.087,
-          "two_strike_pitches": 2,
+          "usage": 0.1304,
+          "two_strike_pitches": 3,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
@@ -68278,8 +68278,8 @@
         {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
-          "usage": 0.1429,
-          "two_strike_pitches": 2,
+          "usage": 0.2143,
+          "two_strike_pitches": 3,
           "strikeouts": 0,
           "putaway_rate": 0.0
         },
@@ -68288,14 +68288,6 @@
           "pitch_name": "Four-Seam Fastball",
           "usage": 0.1429,
           "two_strike_pitches": 2,
-          "strikeouts": 0,
-          "putaway_rate": 0.0
-        },
-        {
-          "pitch_type": "SI",
-          "pitch_name": "Sinker",
-          "usage": 0.0714,
-          "two_strike_pitches": 1,
           "strikeouts": 0,
           "putaway_rate": 0.0
         }
