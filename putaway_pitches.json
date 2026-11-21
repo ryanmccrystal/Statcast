@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T18:48:15Z",
+  "last_updated": "2026-11-21T17:04:16Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -5298,17 +5298,6 @@
           "putaway_rate": 0.122
         },
         {
-          "player_id": 700669,
-          "player_name": "Graceffo, Gordon",
-          "teams": [
-            "STL"
-          ],
-          "team_games": 120,
-          "two_strike_pitches": 50,
-          "strikeouts": 6,
-          "putaway_rate": 0.12
-        },
-        {
           "player_id": 676440,
           "player_name": "Bibee, Tanner",
           "teams": [
@@ -5340,6 +5329,17 @@
           "two_strike_pitches": 46,
           "strikeouts": 5,
           "putaway_rate": 0.1087
+        },
+        {
+          "player_id": 700669,
+          "player_name": "Graceffo, Gordon",
+          "teams": [
+            "STL"
+          ],
+          "team_games": 120,
+          "two_strike_pitches": 48,
+          "strikeouts": 5,
+          "putaway_rate": 0.1042
         },
         {
           "player_id": 679883,
@@ -40851,10 +40851,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0791,
-          "two_strike_pitches": 20,
-          "strikeouts": 2,
-          "putaway_rate": 0.1
+          "usage": 0.0751,
+          "two_strike_pitches": 19,
+          "strikeouts": 1,
+          "putaway_rate": 0.0526
         },
         {
           "pitch_type": "FF",
@@ -40863,6 +40863,14 @@
           "two_strike_pitches": 3,
           "strikeouts": 0,
           "putaway_rate": 0.0
+        },
+        {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.004,
+          "two_strike_pitches": 1,
+          "strikeouts": 1,
+          "putaway_rate": 1.0
         }
       ],
       "vs_rhb": [
@@ -40943,10 +40951,10 @@
         {
           "pitch_type": "FC",
           "pitch_name": "Cutter",
-          "usage": 0.0638,
-          "two_strike_pitches": 9,
-          "strikeouts": 2,
-          "putaway_rate": 0.2222
+          "usage": 0.0567,
+          "two_strike_pitches": 8,
+          "strikeouts": 1,
+          "putaway_rate": 0.125
         },
         {
           "pitch_type": "FF",
@@ -40955,6 +40963,14 @@
           "two_strike_pitches": 3,
           "strikeouts": 0,
           "putaway_rate": 0.0
+        },
+        {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.0071,
+          "two_strike_pitches": 1,
+          "strikeouts": 1,
+          "putaway_rate": 1.0
         }
       ]
     },
@@ -114227,10 +114243,10 @@
         {
           "pitch_type": "CU",
           "pitch_name": "Curveball",
-          "usage": 0.2101,
-          "two_strike_pitches": 50,
-          "strikeouts": 6,
-          "putaway_rate": 0.12
+          "usage": 0.2017,
+          "two_strike_pitches": 48,
+          "strikeouts": 5,
+          "putaway_rate": 0.1042
         },
         {
           "pitch_type": "FC",
@@ -114241,20 +114257,20 @@
           "putaway_rate": 0.15
         },
         {
+          "pitch_type": "SL",
+          "pitch_name": "Slider",
+          "usage": 0.1555,
+          "two_strike_pitches": 37,
+          "strikeouts": 8,
+          "putaway_rate": 0.2162
+        },
+        {
           "pitch_type": "CH",
           "pitch_name": "Changeup",
           "usage": 0.1471,
           "two_strike_pitches": 35,
           "strikeouts": 6,
           "putaway_rate": 0.1714
-        },
-        {
-          "pitch_type": "SL",
-          "pitch_name": "Slider",
-          "usage": 0.1471,
-          "two_strike_pitches": 35,
-          "strikeouts": 7,
-          "putaway_rate": 0.2
         },
         {
           "pitch_type": "SI",
@@ -114283,20 +114299,20 @@
           "putaway_rate": 0.129
         },
         {
-          "pitch_type": "CU",
-          "pitch_name": "Curveball",
-          "usage": 0.2093,
-          "two_strike_pitches": 27,
-          "strikeouts": 5,
-          "putaway_rate": 0.1852
-        },
-        {
           "pitch_type": "SL",
           "pitch_name": "Slider",
-          "usage": 0.186,
-          "two_strike_pitches": 24,
-          "strikeouts": 5,
-          "putaway_rate": 0.2083
+          "usage": 0.2016,
+          "two_strike_pitches": 26,
+          "strikeouts": 6,
+          "putaway_rate": 0.2308
+        },
+        {
+          "pitch_type": "CU",
+          "pitch_name": "Curveball",
+          "usage": 0.1938,
+          "two_strike_pitches": 25,
+          "strikeouts": 4,
+          "putaway_rate": 0.16
         },
         {
           "pitch_type": "CH",
