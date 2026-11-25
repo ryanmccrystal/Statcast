@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-24T20:28:23Z",
+  "last_updated": "2026-11-25T19:43:31Z",
   "season": 2026,
   "season_type": "regular",
   "qualification": {
@@ -65904,8 +65904,8 @@
           "putaway_rate": 0.0
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
           "usage": 0.0149,
           "two_strike_pitches": 1,
           "strikeouts": 0,
@@ -65956,8 +65956,8 @@
           "putaway_rate": 0.25
         },
         {
-          "pitch_type": "FC",
-          "pitch_name": "Cutter",
+          "pitch_type": "FF",
+          "pitch_name": "Four-Seam Fastball",
           "usage": 0.0303,
           "two_strike_pitches": 1,
           "strikeouts": 0,
